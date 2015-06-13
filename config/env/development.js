@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: "mongodb://heroku_0wsj0rd5:njh06qj38te4laf47vkdab3msm@ds047642.mongolab.com:47642/heroku_0wsj0rd5",
+	db: 'mongodb://localhost/m-project-dev',
 	app: {
 		title: 'M-project - Development Environment'
 	},
