@@ -7,7 +7,7 @@ var init = require('./config/init')(),
 	mongoose = require('mongoose'),
 	chalk = require('chalk');
 
-var gzippo = require('gzippo');
+//var gzippo = require('gzippo');
 
 /**
  * Main application entry file.
@@ -29,7 +29,7 @@ var app = require('./config/express')(db);
 require('./config/passport')();
 
 //heroku
-app.use(gzippo.staticGzip("" + __dirname + "/dist"));
+//app.use(gzippo.staticGzip("" + __dirname + "/dist"));
 
 // Start the app by listening on <port>
 app.listen(config.port);
