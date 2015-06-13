@@ -1,0 +1,19 @@
+<section data-ng-controller="IntroducesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Introduces</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="introduce in introduces" data-ng-href="#!/introduces/{{introduce._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="introduce.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="introduce.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="introduce.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!introduces.$resolved || introduces.length">
+    	No Introduces yet, why don't you <a href="/#!/introduces/create">create one</a>?
+    </div>
+</section>
