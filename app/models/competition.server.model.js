@@ -13,25 +13,43 @@ var CompetitionSchema = new Schema({
 	name: {
 		type: String,
 		default: '',
-		required: 'Please fill Competition name',
+		required: '이름을 적어주세요',
 		trim: true
 	},
 	description : {
 		type: String,
 		default: '',
-		required: 'Please fill Competition desc',
+		required: '팀 설명을 적어주세요',
 		trim: true
 	},
-	teamImg : {
+	phoneNum : {
 		type: String,
 		default: '',
-		required: 'Please fill Competition desc',
+		required: '핸드폰 번호를 적어주세요',
 		trim: true
 	},
+	address : {
+		type: String,
+		default: '',
+		required: '주소를 적어주세요',
+		trim: true
+	},
+	country : {
+		type: String,
+		default: '',
+		required: '국가를 적어주세요',
+		trim: true
+	},
+	//teamImg : {
+	//	type: String,
+	//	default: '',
+	//	required: 'Please fill teamImg',
+	//	trim: true
+	//},
 	teamUrl : {
 		type: String,
 		default: '',
-		required: 'Please fill Competition desc',
+		required: '유튜브 공유 주소를 적어주세요',
 		trim: true
 	},
 	created: {
@@ -41,6 +59,10 @@ var CompetitionSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
+	},
+	comments:{
+		type:Array,
+		default: []
 	}
 });
 

@@ -6,14 +6,23 @@
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
 	Competition = mongoose.model('Competition'),
+	Comment = mongoose.model('Comment'),
 	_ = require('lodash');
+var	async = require('async');
+var formidable = require('formidable');
 
 /**
  * Create a Competition
  */
 exports.create = function(req, res) {
+
 	var competition = new Competition(req.body);
 	competition.user = req.user;
+
+	var form = new formidable.IncomingForm();
+	form.encoding = 'utf-8';
+	form.uploadDir = path.join(__dirname, '../public/modules/competitions/images/upload');
+
 
 	competition.save(function(err) {
 		if (err) {
@@ -25,6 +34,7 @@ exports.create = function(req, res) {
 		}
 	});
 };
+
 
 /**
  * Show the current Competition
@@ -87,14 +97,15 @@ exports.list = function(req, res) {
 /**
  * Competition middleware
  */
-exports.competitionByID = function(req, res, next, id) { 
-	Competition.findById(id).populate('user', 'displayName').exec(function(err, competition) {
+exports.competitionByID = function(req, res, next, id) {
+	Competition.findById(id).populate('user', 'displayName').exec(function (err, competition) {
 		if (err) return next(err);
-		if (! competition) return next(new Error('Failed to load Competition ' + id));
-		req.competition = competition ;
+		if (!competition) return next(new Error('Failed to load Competition ' + id));
+		req.competition = competition;
 		next();
 	});
 };
+
 
 /**
  * Competition authorization middleware

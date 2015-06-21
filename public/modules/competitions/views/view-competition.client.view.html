@@ -1,6 +1,8 @@
 <section data-ng-controller="CompetitionsController" data-ng-init="findOne()">
 	<div class="page-header">
 		<h1 data-ng-bind="competition.name"></h1>
+		<p data-ng-bind="competition.description"></p>
+		<youtube-video video-url="competition.teamUrl"></youtube-video>
 	</div>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == competition.user._id))">
 		<a class="btn btn-primary" href="/#!/competitions/{{competition._id}}/edit">
@@ -18,4 +20,30 @@
 			<span data-ng-bind="competition.user.displayName"></span>
 		</em>
 	</small>
+	<button ng-click="backToList()">목록</button>
+
+	<form class="form-horizontal" data-ng-submit="addComment()" novalidate>
+		<fieldset>
+			<div class="form-group">
+				<label class="control-label" for="comment">댓글</label>
+				<div class="controls">
+					<input type="text" data-ng-model="commentContent" id="comment" class="form-control" placeholder="comment" required>
+				</div>
+			</div>
+		</fieldset>
+
+		<div class="form-group">
+			<input type="submit" class="btn btn-default" value="댓글달기">
+		</div>
+	</form>
+
+	<ul>
+		<li data-ng-repeat="comment in comments">{{comment.commentContent}}</li>
+	</ul>
+
+
+	<p data-ng-bind="likeCount"></p>
+	<button>facebook</button>
+	<button>twitter</button>
+	<button ng-click="uniLike()" data-ng-model="uniLikeBtn" >Uni Race</button>
 </section>

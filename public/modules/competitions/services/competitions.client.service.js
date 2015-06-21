@@ -11,3 +11,26 @@ angular.module('competitions').factory('Competitions', ['$resource',
 		});
 	}
 ]);
+
+
+angular.module('competitions').factory('Comments', ['$resource',
+	function($resource) {
+		return $resource('comments/:commentId', { commentId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);
+
+angular.module('competitions').factory('Likes', ['$resource',
+	function($resource) {
+		return $resource('likes/:likeId', { likeId: '@_id'
+		}, {
+			update: {
+				method: 'PUT'
+			}
+		});
+	}
+]);

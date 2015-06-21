@@ -1,15 +1,25 @@
 'use strict';
 
 // Competitions controller
-angular.module('competitions').controller('CompetitionsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Competitions',
-	function($scope, $stateParams, $location, Authentication, Competitions) {
+angular.module('competitions').controller('CompetitionsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Competitions','Comments','Likes',
+	function($scope, $stateParams, $location, Authentication, Competitions,Comments,Likes) {
 		$scope.authentication = Authentication;
+		$scope.likeCount = 0;
+
+
+		console.log($scope.authentication);
 
 		// Create new Competition
 		$scope.create = function() {
 			// Create new Competition object
+			console.log(this);
 			var competition = new Competitions ({
-				name: this.name
+				name: this.name,
+				description : this.description,
+				phoneNum : this.phoneNum,
+				address : this.address,
+				country : this.country,
+				teamUrl : this.teamUrl,
 			});
 
 			// Redirect after save
@@ -18,6 +28,11 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 				// Clear form fields
 				$scope.name = '';
+				$scope.description = '';
+				$scope.phoneNum = '';
+				$scope.address = '';
+				$scope.country = '';
+				$scope.teamUrl = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
@@ -58,9 +73,94 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 		// Find existing Competition
 		$scope.findOne = function() {
-			$scope.competition = Competitions.get({ 
+			$scope.competition = Competitions.get({
 				competitionId: $stateParams.competitionId
 			});
+
+			$scope.comments = Comments.query({
+				competitionId: $stateParams.competitionId
+			});
+
+			$scope.likes = Likes.query({
+				competitionId: $stateParams.competitionId
+			},function(){
+				$scope.likeCount = getLikeCount($scope.likes);
+				console.log($scope.likeCount);
+			});
+
+
+
 		};
+
+		$scope.backToList = function(){
+			window.history.back();
+		}
+
+
+
+
+
+		$scope.addComment = function() {
+			// Create new Competition object
+			var comment = new Comments ({
+				commentContent : $scope.commentContent,
+				competitionId : $scope.competition._id
+			});
+
+			// Redirect after save
+			comment.$save(function(response) {
+
+				$scope.commentContent = '';
+
+				$scope.comments = Comments.query({
+					competitionId: $stateParams.competitionId
+				});
+
+
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+		};
+
+		$scope.uniLike = function(){
+			var like = new Likes ({
+				uniLike : 1,
+				competitionId : $scope.competition._id
+			});
+			console.log($scope.competition._id);
+
+			// Redirect after save
+			like.$update(like,function(response) {
+
+				$scope.likes = Comments.query({
+					competitionId: $stateParams.competitionId
+				},function(){
+					$scope.likes = Likes.query({
+						competitionId: $stateParams.competitionId
+					},function(){
+						$scope.likeCount = getLikeCount($scope.likes);
+						console.log($scope.likeCount);
+					});
+				});
+
+
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+			});
+
+
+		}
+
+function getLikeCount(likes){
+	var count = 0;
+	for(var i =0; i < likes.length; i ++){
+		 count += likes[i].fbLike;
+		 count += likes[i].twiLike;
+		 count += likes[i].uniLike;
 	}
-]);
+	return count;
+}
+
+
+
+}]);
