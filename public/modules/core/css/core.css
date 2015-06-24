@@ -19,3 +19,31 @@ header .container{
   height: 78px;
   width: 1150px;
 }
+
+
+
+footer{
+	height : 230px ;
+	background-color: #4d6182;
+	width:100%;
+}
+
+footer #footer_container{
+	margin-top:30px;
+	color :white;
+	font-size:14px;
+	height:100px;
+}
+
+footer #footer_container #footer_info{
+	margin-top: 20px;
+}
+
+footer #footer_container #copyright{
+	float:right;
+	font-size:12px;
+}
+
+footer #footer_container span{
+	color :#ff6c11;
+}

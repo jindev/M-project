@@ -31,6 +31,7 @@ module.exports = {
 		},
 		css: [
       'public/application.min.css',
+	  'public/modules/*/css/*.css',
       'public/modules/*/less/*.css'
     ],
     less: [
