@@ -9,6 +9,8 @@ module.exports = function(app) {
 		.get(competitions.list)
 		.post(users.requiresLogin, competitions.create);
 
+	app.route('/upload').post(users.requiresLogin, competitions.upload);
+
 	app.route('/competitions/:competitionId')
 		.get(competitions.read)
 		.put(users.requiresLogin, competitions.hasAuthorization, competitions.update)

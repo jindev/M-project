@@ -1,18 +1,21 @@
 'use strict';
 
 // Competitions controller
-angular.module('competitions').controller('CompetitionsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Competitions','Comments','Likes',
-	function($scope, $stateParams, $location, Authentication, Competitions,Comments,Likes) {
+angular.module('competitions').controller('CompetitionsController', ['$scope', '$stateParams', '$location', '$http' ,'Authentication', 'Competitions','Comments','Likes',
+	function($scope, $stateParams, $location,$http, Authentication, Competitions,Comments,Likes) {
 		$scope.authentication = Authentication;
 		$scope.likeCount = 0;
 
 
 		console.log($scope.authentication);
 
+		$scope.userId = $scope.authentication.user.username;
+
+
 		// Create new Competition
 		$scope.create = function() {
 			// Create new Competition object
-			console.log(this);
+			console.log($scope.teamImg);
 			var competition = new Competitions ({
 				name: this.name,
 				description : this.description,
@@ -20,6 +23,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 				address : this.address,
 				country : this.country,
 				teamUrl : this.teamUrl,
+				teamImg : this.teamImg
 			});
 
 			// Redirect after save
@@ -151,6 +155,11 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 		}
 
+
+
+
+
+
 function getLikeCount(likes){
 	var count = 0;
 	for(var i =0; i < likes.length; i ++){
@@ -164,3 +173,6 @@ function getLikeCount(likes){
 
 
 }]);
+
+
+
