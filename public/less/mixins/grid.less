@@ -11,6 +11,15 @@
   &:extend(.clearfix all);
 }
 
+.content .container{
+  background: url("modules/core/img/bg.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
   margin-left:  ceil((@gutter / -2));
