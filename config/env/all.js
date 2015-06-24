@@ -12,10 +12,7 @@ module.exports = {
 	sessionCollection: 'sessions',
 	assets: {
 		lib: {
-			css: [
-				'public/lib/bootstrap/dist/css/bootstrap.css',
-				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-			],
+			css: [],
 			js: [
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js', 
@@ -33,8 +30,12 @@ module.exports = {
 			]
 		},
 		css: [
-			'public/modules/**/css/*.css'
-		],
+      'public/application.min.css',
+      'public/modules/*/less/*.css'
+    ],
+    less: [
+      'public/modules/*/less/*.less'
+    ],
 		js: [
 			'public/config.js',
 			'public/application.js',

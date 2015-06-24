@@ -13,3 +13,9 @@
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
 }
+
+header .container{
+  background: url("/modules/core/img/global-nav/manubar.png");
+  height: 78px;
+  width: 1150px;
+}
