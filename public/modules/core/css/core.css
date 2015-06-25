@@ -57,20 +57,30 @@
 #competition_award_con{
  background-color:#22d2a7;
 	height:auto;
+	padding-bottom:40px;
  }
 
 #competition_award_con .container{
 	padding-top:50px;
 	width:90%;
-	text-align: center;
+	padding:0;
 }
+#award_tag{
+	padding-top :40px;
 
+}
 .award_con{
+
 	border:#4d6182 solid 3px ;
 	height:300px;
 	margin:0;
 	padding:0;
 	background-color: white;
+	text-align: center;
+}
+
+#competition_award_con .row{
+	padding-top :40px;
 }
 
 .award_img{
@@ -87,6 +97,32 @@
 .award_text{
 	width:100%;
 }
+
+.award_text p{
+  font-size:14px;
+}
+.award_text p span{
+	font-size:18px;
+	color:#ff6c11;
+}
+
+.award_text p span span{
+	font-size:20px;
+}
+
+
+.judge_text h3{
+	color:#ff6c11;
+}
+.judge_text h3 span{
+	color:#4d6182;
+	font-size: 14px;
+}
+
+
+
+
+
 
 
 .undecorated-link:hover {
