@@ -19,13 +19,13 @@ module.exports = {
 		js: 'public/dist/application.min.js'
 	},
 	facebook: {
-		clientID: process.env.FACEBOOK_ID || 'APP_ID',
-		clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+		clientID: process.env.FACEBOOK_ID || '1419184695072279',
+		clientSecret: process.env.FACEBOOK_SECRET || 'a9a329b8d20f217c469bcd72eaddf3db',
 		callbackURL: '/auth/facebook/callback'
 	},
 	twitter: {
-		clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',
-		clientSecret: process.env.TWITTER_SECRET || 'CONSUMER_SECRET',
+		clientID: process.env.TWITTER_KEY || 'ZyQsp99uSR12iHs6lyZFkTSkP',
+		clientSecret: process.env.TWITTER_SECRET || 'QIZQ0PnJMwHUFx4K2lUEX5FzJ6Fv4Gh8K4g8aXj3EzUeuKBpwl',
 		callbackURL: '/auth/twitter/callback'
 	},
 	google: {
