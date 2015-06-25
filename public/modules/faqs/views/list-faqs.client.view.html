@@ -8,6 +8,7 @@
     <div class="list-group">
         <div data-ng-repeat="faq in faqs" data-ng-href="#!/faqs/{{faq._id}}" class="list-group-item">
 			<h4 class="list-group-item-heading" data-ng-bind="faq.name"></h4>
+            <p data-ng-bind="faq.content"></p>
         </div>
     </div>
 </section>

@@ -9,7 +9,8 @@ angular.module('faqs').controller('FaqsController', ['$scope', '$stateParams', '
 		$scope.create = function() {
 			// Create new Faq object
 			var faq = new Faqs ({
-				name: this.name
+				name: this.name,
+				content : this.content
 			});
 
 			// Redirect after save
