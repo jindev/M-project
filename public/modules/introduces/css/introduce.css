@@ -49,8 +49,8 @@
     background: url('/modules/introduces/img/sub_speasman.png') no-repeat 0 0;
 }
 #join_info{
+    margin-bottom: 25px;
     width:100%;
-    height:300px;
     background-color:white;
     border: 6px solid #4d6182;
     border-radius: 6px;
@@ -121,8 +121,9 @@
     padding-top:20px;
 }
 #join_info p{
-    margin-top: 30px;
-    margin-left:60px;
-    font-size:18px;
+    margin: 0;
+    padding: 20px 25px;
+    font-size:24px;
     color:#4d6182;
+    line-height: 1.7;
 }
