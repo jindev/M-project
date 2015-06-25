@@ -16,6 +16,12 @@ var FaqSchema = new Schema({
 		required: 'Please fill Faq name',
 		trim: true
 	},
+	content:{
+		type : String,
+		default : '',
+		required : 'Please fill News content',
+		trim: true
+	},
 	created: {
 		type: Date,
 		default: Date.now
