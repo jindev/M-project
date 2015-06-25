@@ -24,24 +24,68 @@
     width:100%;
     height:300px;
     background-color:white;
-    border:3px solid #4d6182;
+    border: 6px solid #4d6182;
+    border-radius: 6px;
 }
 #join_guide{
+    margin-bottom: 25px;
     width:100%;
     height:500px;
     background-color:white;
-    border:3px solid #4d6182;
+    border: 6px solid #4d6182;
+    border-radius: 6px;
 }
-#join_guide img{
-    padding-top:20px;
+#join_guide h2 em{
+    font-style: normal;
+    font-size: 18px;
+    color: #4d6081;
+    display: inline-block;
+    line-height: 40px;
 }
 #join_guide ul{
-    width:100%;
+    margin: 0;
+    padding: 10px 0 0;
     list-style-type: none;
-    display:inline;
 }
 #join_guide li{
-    display:inline;
+    padding: 0 20px;
+}
+#join_guide li .block{
+    background: url('/modules/introduces/img/means_arrow.png') no-repeat 100% 40px;
+}
+#join_guide li:last-child .block{
+    background: none;
+}
+#join_guide li .block .dummy{
+    height: 140px;
+}
+#join_guide .reg01 .block .dummy{
+    background: url('/modules/introduces/img/means_A.png') no-repeat 0 50%;
+}
+#join_guide .reg02 .block .dummy{
+    background: url('/modules/introduces/img/means_B.png') no-repeat 0 50%;
+}
+#join_guide .reg03 .block .dummy{
+    background: url('/modules/introduces/img/means_C.png') no-repeat 0 50%;
+}
+#join_guide .reg04 .block .dummy{
+    background: url('/modules/introduces/img/means_D.png') no-repeat 0 50%;
+}
+#join_guide h3,
+#join_guide p{
+    margin: 15px 0;
+    line-height: 1.5;
+}
+#join_guide h3{
+    font-size: 24px;
+    color: #ff6d0a;
+}
+#join_guide p{
+    font-size: 18px;
+    color: #4d6081;
+}
+#join_guide p b{
+    color: #ff6d0a;
 }
 
 
