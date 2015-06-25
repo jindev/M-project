@@ -7,18 +7,46 @@
 .intro_container{
     width:90%;
 }
-
-#intro_title{
-    padding-top: 70px;
-    font-size:50px;
-    color:yellow;
-    text-align: center;
+.introduces-list-header{
+    height: 518px;
+    position: relative;
+    background:url('/modules/introduces/img/sub_title.png') no-repeat 50% 80px;
 }
-#intro_desc{
-    padding-top: 70px;
+.introduces-list-header p{
+    padding-top: 275px;
     font-size:40px;
     color:white;
     text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 1.1;
+}
+.introduces-list-header .dummy01,
+.introduces-list-header .dummy02,
+.introduces-list-header .dummy03{
+    position: absolute;
+}
+.introduces-list-header .dummy01{
+    width: 145px;
+    height: 125px;
+    bottom: 197px;
+    left: 28px;
+    background: url('/modules/introduces/img/sub_speasship.png') no-repeat 0 0;
+}
+.introduces-list-header .dummy02{
+    width: 158px;
+    height: 187px;
+    bottom: 52px;
+    right: 94px;
+    background: url('/modules/introduces/img/sub_speace_flag.png') no-repeat 0 0;
+}
+.introduces-list-header .dummy03{
+    width: 219px;
+    height: 273px;
+    bottom: -87px;
+    right: 0;
+    background: url('/modules/introduces/img/sub_speasman.png') no-repeat 0 0;
 }
 #join_info{
     width:100%;
