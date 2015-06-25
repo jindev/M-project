@@ -9,7 +9,7 @@ var mongoose = require('mongoose'),
 	Comment = mongoose.model('Comment'),
 	_ = require('lodash');
 var	async = require('async');
-var formidable = require('formidable');
+//var formidable = require('formidable');
 var path = require('path');
 var util = require('util');
 var fs = require('fs');
@@ -23,35 +23,35 @@ exports.upload = function(req,res){
 
 	var userId = req.user.username;
 
-	var form = new formidable.IncomingForm();
-	form.encoding = 'utf-8';
-	form.uploadDir = path.join(__dirname, '../../public/modules/competitions/img/upload');
-	form.keepExtensions = true;
-
-	form.on('file', function(field, file) {
-		//rename the incoming file to the file's name
-		console.log(file);
-		fs.rename(file.path, form.uploadDir + "/" + userId+'.png');
-	})
-		.on('error', function(err) {
-			console.log("an error has occured with form upload");
-			console.log(err);
-			req.resume();
-		})
-		.on('aborted', function(err) {
-			console.log("user aborted upload");
-		})
-		.on('end', function() {
-			console.log('-> upload done');
-
-		});
-
-	form.parse(req, function(err, fields, files) {
-		var JS_Script = '<script>function Test() { confirm("test success"); } Test();</script>';
-		res.writeHead(200, {'Content-Type':'text/html'});
-		res.write(JS_Script);
-		res.end();
-	});
+	//var form = new formidable.IncomingForm();
+	//form.encoding = 'utf-8';
+	//form.uploadDir = path.join(__dirname, '../../public/modules/competitions/img/upload');
+	//form.keepExtensions = true;
+    //
+	//form.on('file', function(field, file) {
+	//	//rename the incoming file to the file's name
+	//	console.log(file);
+	//	fs.rename(file.path, form.uploadDir + "/" + userId+'.png');
+	//})
+	//	.on('error', function(err) {
+	//		console.log("an error has occured with form upload");
+	//		console.log(err);
+	//		req.resume();
+	//	})
+	//	.on('aborted', function(err) {
+	//		console.log("user aborted upload");
+	//	})
+	//	.on('end', function() {
+	//		console.log('-> upload done');
+    //
+	//	});
+    //
+	//form.parse(req, function(err, fields, files) {
+	//	var JS_Script = '<script>function Test() { confirm("test success"); } Test();</script>';
+	//	res.writeHead(200, {'Content-Type':'text/html'});
+	//	res.write(JS_Script);
+	//	res.end();
+	//});
 
 };
 
