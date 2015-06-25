@@ -4,7 +4,7 @@ module.exports = {
 	//db: 'mongodb://localhost/m-project-dev',
 	db: process.env.MONGOHQ_URL || "mongodb://heroku_0wsj0rd5:njh06qj38te4laf47vkdab3msm@ds047642.mongolab.com:47642/heroku_0wsj0rd5",
 	app: {
-		title: 'M-project - Development Environment'
+		title: 'UNI MUSIC RACE'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || '1419184695072279',
