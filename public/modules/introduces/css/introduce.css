@@ -7,41 +7,113 @@
 .intro_container{
     width:90%;
 }
-
-#intro_title{
-    padding-top: 70px;
-    font-size:50px;
-    color:yellow;
-    text-align: center;
+.introduces-list-header{
+    height: 518px;
+    position: relative;
+    background:url('/modules/introduces/img/sub_title.png') no-repeat 50% 80px;
 }
-#intro_desc{
-    padding-top: 70px;
+.introduces-list-header p{
+    padding-top: 275px;
     font-size:40px;
     color:white;
     text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 1.1;
+}
+.introduces-list-header .dummy01,
+.introduces-list-header .dummy02,
+.introduces-list-header .dummy03{
+    position: absolute;
+}
+.introduces-list-header .dummy01{
+    width: 145px;
+    height: 125px;
+    bottom: 197px;
+    left: 28px;
+    background: url('/modules/introduces/img/sub_speasship.png') no-repeat 0 0;
+}
+.introduces-list-header .dummy02{
+    width: 158px;
+    height: 187px;
+    bottom: 52px;
+    right: 94px;
+    background: url('/modules/introduces/img/sub_speace_flag.png') no-repeat 0 0;
+}
+.introduces-list-header .dummy03{
+    width: 219px;
+    height: 273px;
+    bottom: -87px;
+    right: 0;
+    background: url('/modules/introduces/img/sub_speasman.png') no-repeat 0 0;
 }
 #join_info{
+    margin-bottom: 25px;
     width:100%;
-    height:300px;
     background-color:white;
-    border:3px solid #4d6182;
+    border: 6px solid #4d6182;
+    border-radius: 6px;
 }
 #join_guide{
+    margin-bottom: 25px;
     width:100%;
     height:500px;
     background-color:white;
-    border:3px solid #4d6182;
+    border: 6px solid #4d6182;
+    border-radius: 6px;
 }
-#join_guide img{
-    padding-top:20px;
+#join_guide h2 em{
+    font-style: normal;
+    font-size: 18px;
+    color: #4d6081;
+    display: inline-block;
+    line-height: 40px;
 }
 #join_guide ul{
-    width:100%;
+    margin: 0;
+    padding: 10px 0 0;
     list-style-type: none;
-    display:inline;
 }
 #join_guide li{
-    display:inline;
+    padding: 0 20px;
+}
+#join_guide li .block{
+    background: url('/modules/introduces/img/means_arrow.png') no-repeat 100% 40px;
+}
+#join_guide li:last-child .block{
+    background: none;
+}
+#join_guide li .block .dummy{
+    height: 140px;
+}
+#join_guide .reg01 .block .dummy{
+    background: url('/modules/introduces/img/means_A.png') no-repeat 0 50%;
+}
+#join_guide .reg02 .block .dummy{
+    background: url('/modules/introduces/img/means_B.png') no-repeat 0 50%;
+}
+#join_guide .reg03 .block .dummy{
+    background: url('/modules/introduces/img/means_C.png') no-repeat 0 50%;
+}
+#join_guide .reg04 .block .dummy{
+    background: url('/modules/introduces/img/means_D.png') no-repeat 0 50%;
+}
+#join_guide h3,
+#join_guide p{
+    margin: 15px 0;
+    line-height: 1.5;
+}
+#join_guide h3{
+    font-size: 24px;
+    color: #ff6d0a;
+}
+#join_guide p{
+    font-size: 18px;
+    color: #4d6081;
+}
+#join_guide p b{
+    color: #ff6d0a;
 }
 
 
@@ -49,8 +121,20 @@
     padding-top:20px;
 }
 #join_info p{
-    margin-top: 30px;
-    margin-left:60px;
-    font-size:18px;
+    margin: 0;
+    padding: 20px 25px;
+    font-size:24px;
     color:#4d6182;
+    line-height: 1.7;
+}
+.common-button{
+    padding: 85px 0;
+    text-align: center;
+}
+.common-button a{
+    display: inline-block;
+    width: 285px;
+    height: 107px;
+    line-height: 107px;
+    background: url('/modules/introduces/img/registration_btn.png') no-repeat 0 0;
 }
