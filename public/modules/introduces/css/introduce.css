@@ -127,3 +127,14 @@
     color:#4d6182;
     line-height: 1.7;
 }
+.common-button{
+    padding: 85px 0;
+    text-align: center;
+}
+.common-button a{
+    display: inline-block;
+    width: 285px;
+    height: 107px;
+    line-height: 107px;
+    background: url('/modules/introduces/img/registration_btn.png') no-repeat 0 0;
+}
