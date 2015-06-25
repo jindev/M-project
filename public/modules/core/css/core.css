@@ -153,20 +153,24 @@ header .container{
 
 
 footer{
-	height : 230px ;
+	height: 230px;
 	background-color: #4d6182;
 	width:100%;
 }
 
 footer #footer_container{
-	margin-top:30px;
 	color :white;
 	font-size:14px;
-	height:100px;
 }
 
+footer #footer_container img{
+	padding-top: 30px;
+}
 footer #footer_container #footer_info{
 	margin-top: 20px;
+}
+footer #footer_container #footer_info p{
+	font-size: 18px;
 }
 
 footer #footer_container #copyright{
