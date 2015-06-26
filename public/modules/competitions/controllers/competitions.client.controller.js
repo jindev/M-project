@@ -2,7 +2,7 @@
 
 // Competitions controller
 angular.module('competitions').controller('CompetitionsController', ['$scope', '$stateParams', '$location', '$http' ,'Authentication', 'Competitions','Comments','Likes',
-	function($scope, $stateParams, $location,$http, Authentication, Competitions,Comments,Likes) {
+	function($scope, $stateParams, $location,$http, Authentication, Competitions,Comments,Likes,$log) {
 		$scope.authentication = Authentication;
 		$scope.likeCount = 0;
 
@@ -103,8 +103,12 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 		// Find a list of Competitions
 		$scope.find = function() {
-			$scope.competitions = Competitions.query({},function(data){
-				$scope.pageNumbers = data;
+			$scope.competitions =
+			Competitions.query({
+
+			},function(data){
+				alert(data.length);
+				$scope.totalItems = data.length;
 			});
 		};
 
@@ -178,8 +182,6 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 				$scope.comments = Comments.query({
 					competitionId: $stateParams.competitionId
 				});
-
-
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
@@ -282,6 +284,32 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 				alert();
 			}).error();
 		};
+
+
+
+
+		//페이지네이션
+
+
+		$scope.currentPage = 1;
+
+
+		$scope.setPage = function (pageNo) {
+			console.log(pageNo);
+			$scope.currentPage = pageNo;
+		};
+
+		$scope.pageChanged = function() {
+
+			$scope.competitions = Competitions.query({
+				nPerPage : 3,
+				pageNumber : $scope.currentPage
+			});
+
+
+		};
+
+		$scope.maxSize = 10;
 
 
 

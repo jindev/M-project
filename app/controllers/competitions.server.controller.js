@@ -120,15 +120,29 @@ exports.list = function(req, res) {
 	var pageNumber = req.query.pageNumber;
 	var nPerPage = req.query.nPerPage;
 
-	Competition.find().sort('-created').skip(pageNumber > 0 ? ((pageNumber-1)*nPerPage) : 0).limit(nPerPage).exec(function(err, competitions) {
-		if (err) {
-			return res.status(400).send({
-				message: errorHandler.getErrorMessage(err)
-			});
-		} else {
-			res.jsonp(competitions);
-		}
-	});
+	if(pageNumber && nPerPage){
+		Competition.find().sort('-created').skip(pageNumber > 0 ? ((pageNumber-1)*nPerPage) : 0).limit(nPerPage).exec(function(err, competitions) {
+			if (err) {
+				return res.status(400).send({
+					message: errorHandler.getErrorMessage(err)
+				});
+			} else {
+				res.jsonp(competitions);
+			}
+		});
+	}else{
+		Competition.find().sort('-created').exec(function(err, competitions) {
+			if (err) {
+				return res.status(400).send({
+					message: errorHandler.getErrorMessage(err)
+				});
+			} else {
+				res.jsonp(competitions);
+			}
+		});
+	}
+
+
 };
 
 /**
