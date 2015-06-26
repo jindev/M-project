@@ -12,8 +12,10 @@ module.exports = function(app) {
 
     app.route('/likes/:likesId')
         .get(likeCtrl.read)
-
         .delete(users.requiresLogin, likeCtrl.hasAuthorization, likeCtrl.delete);
+
+
+    app.route('/like/:userId').get(likeCtrl.getUserLike);
 
 
     app.param('likesId', likeCtrl.competitionByID);

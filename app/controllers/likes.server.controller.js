@@ -117,6 +117,22 @@ exports.list = function(req, res) {
     });
 };
 
+
+exports.getUserLike = function(req,res){
+
+    var userId = req.user._id;
+
+    Like.find({"user" : userId},function(err, likes) {
+        if (err) {
+            return res.status(400).send({
+                message: errorHandler.getErrorMessage(err)
+            });
+        } else {
+            res.jsonp(likes);
+        }
+    });
+}
+
 exports.hasAuthorization = function(req, res, next) {
     if (req.user.id) {
         return res.status(403).send('User is not authorized');

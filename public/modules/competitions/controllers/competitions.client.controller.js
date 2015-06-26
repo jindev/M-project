@@ -9,17 +9,24 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 		console.log($scope.authentication);
 
-		$scope.userId = $scope.authentication.user.username;
+		$scope.userId = $scope.authentication.user._id;
 
 
+		if($scope.authentication){
+			$scope.uniLikeBtnFlag = false;
+		}
 
-		if(additionalProvidersData){
-			if(additionalProvidersData.facebook){
+		if(Authentication.user.additionalProvidersData){
+			if(Authentication.user.additionalProvidersData.facebook){
 
+				$scope.fbLikeBtnFlag = false;
 			}
-			if(additionalProvidersData.facebook){
-
+			if(Authentication.user.additionalProvidersData.twitter){
+				$scope.twiLikeBtnFlag = false;
 			}
+		}else{
+			$scope.fbLikeBtnFlag = true;
+			$scope.twiLikeBtnFlag = true;
 		}
 
 
@@ -86,6 +93,29 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			$scope.competitions = Competitions.query();
 		};
 
+
+		$scope.getUserLike = function(){
+			$http.get('/like/' + $scope.userId).
+				success(function(data, status, headers, config) {
+					if(data){
+						if(data[0].fbLike == 1){
+							$scope.fbLikeBtnFlag = true;
+						}
+						if(data[0].twiLike == 1){
+							$scope.twiLikeBtnFlag = true;
+						}
+						if(data[0].uniLike == 1){
+							$scope.uniLikeBtnFlag = true;
+						}
+
+					}
+
+				}).
+				error(function(data, status, headers, config) {
+
+				});
+		}
+
 		// Find existing Competition
 		$scope.findOne = function() {
 			$scope.competition = Competitions.get({
@@ -102,6 +132,9 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 				$scope.likeCount = getLikeCount($scope.likes);
 				console.log($scope.likeCount);
 			});
+
+
+			$scope.getUserLike();
 
 
 
