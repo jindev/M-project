@@ -1,8 +1,8 @@
 'use strict';
 
 // Competitions controller
-angular.module('competitions').controller('CompetitionsController', ['$scope', '$stateParams', '$location', '$http' ,'Authentication', 'Competitions','Comments','Likes',
-	function($scope, $stateParams, $location,$http, Authentication, Competitions,Comments,Likes,$log) {
+angular.module('competitions').controller('CompetitionsController', ['$scope', '$stateParams', '$location', '$http' ,'Authentication', 'Competitions','Comments','Likes','$window',
+	function($scope, $stateParams, $location,$http, Authentication, Competitions,Comments,Likes,$window) {
 		$scope.authentication = Authentication;
 		$scope.likeCount = 0;
 
@@ -164,6 +164,17 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 		}
 
 
+		$scope.checkAlreadyRegi = function(){
+			$http.get('/checkAlreadyRegi', {
+
+			}).success(function(data){
+				if(data.length > 1){
+					alert("이미 참가 신청 하셨습니다.");
+					$window.history.back();
+				}
+			}).error();
+		}
+
 
 
 
@@ -206,6 +217,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 						$scope.likeCount = getLikeCount($scope.likes);
 						console.log($scope.likeCount);
 						$scope.uniLikeBtnFlag = true;
+						alert('좋아요');
 					});
 				});
 
@@ -235,6 +247,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 						$scope.likeCount = getLikeCount($scope.likes);
 						console.log($scope.likeCount);
 						$scope.fbLikeBtnFlag = true;
+						alert('좋아요');
 					});
 				});
 			}, function(errorResponse,result) {
@@ -263,6 +276,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 						$scope.likeCount = getLikeCount($scope.likes);
 						console.log($scope.likeCount);
 						$scope.twiLikeBtnFlag = true;
+						alert('좋아요');
 					});
 				});
 			}, function(errorResponse) {
