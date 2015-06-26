@@ -19,3 +19,16 @@
 .dragover {
     border: 5px dashed blue;
 }
+
+.notice-description{  
+  text-align: right;
+}
+.agree-description{
+  text-align: left;
+  margin: 20px 0px;
+}
+
+.agree-radio{
+  display:inline;
+  margin-right:30px;
+}
