@@ -12,3 +12,26 @@
 	right: 10px;
 	position: absolute;
 }
+.signup_container{
+	width:100%;
+	height:1500px;
+	background-image: url('../img/bg.jpg') ;
+	background-repeat:no-repeat ;
+	background-size: 100%;
+  clear: both;
+}
+
+.signup_info{
+    margin-bottom: 25px;
+    width:100%;
+    background-color:white;
+    border: 6px solid #4d6182;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.signup_form{
+  text-align:left;
+  padding:50px;  
+}
+
+
