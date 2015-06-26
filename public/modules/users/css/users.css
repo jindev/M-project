@@ -111,3 +111,11 @@
   padding:50px;  
 }
 
+.login_button, .signin_button{
+  margin-bottom: 10px;
+}
+
+.login_button_size, .signin_button_size{
+  width: 85%;
+  height: auto;
+}
