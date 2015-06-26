@@ -1,19 +1,18 @@
 <section class="row" data-ng-controller="AuthenticationController">
-  <div class="signup_container">
+  <div class="signin_container">
     <div class="container-fluid intro_container">
       <div class="signup-list-header">
-        
         <div class="title-text"></div>
         <div class="dummy01"></div>
         <div class="dummy02"></div>
         <div class="dummy03"></div>
       </div>
-      <article class="signup_info">
+      <article class="signin_info">
         <h2>
-          <img src="modules/introduces/img/registerinfo_tac.png" alt="회원가입">
+          <img src="modules/introduces/img/registerinfo_tac.png" alt="로그인">
         </h2>
         
-        <div class="signup_form">
+        <div class="signin_form">
           <div class="row">
             <div class="col-md-6">
               <form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
@@ -25,24 +24,13 @@
                     <input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="패스워드">
                   </div>
                   <div class="form-group">
-                    <input type="password" id="password-confirm" name="password-confirm" class="form-control" data-ng-model="credentials.password" placeholder="패스워드 확인">
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-block">회원가입하기</button>
+                    <button type="submit" class="btn btn-success btn-block">로그인하기</button>
                   </div>
                   <div data-ng-show="error" class="text-center text-danger">
                     <strong data-ng-bind="error"></strong>
                   </div>
                 </fieldset>
               </form>
-              <span>
-                <input type="checkbox" name="chk_info" value="HTML"> 이용약관에 동의합니다.
-              </span>
-              <span>
-                <a href="/auth/facebook" class="undecorated-link">
-                  <img src="/modules/users/img/btn_terms.png">
-                </a>
-              </span>
             </div>
             <div class="col-md-6">
               <ul class="list-unstyled">
