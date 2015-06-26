@@ -9,7 +9,7 @@
       </div>
       <article class="signin_info">
         <h2>
-          <img src="modules/introduces/img/registerinfo_tac.png" alt="로그인">
+          <img src="/modules/users/img/login_tac.png" alt="로그인">
         </h2>
         
         <div class="signin_form">
@@ -18,13 +18,15 @@
               <form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
                 <fieldset>
                   <div class="form-group">
-                    <input type="email" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="이메일">
+                    <input type="email" id="email" name="email" class="form-control signin_button_size" data-ng-model="credentials.email" placeholder="이메일">
                   </div>
                   <div class="form-group">
-                    <input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="패스워드">
+                    <input type="password" id="password" name="password" class="form-control signin_button_size" data-ng-model="credentials.password" placeholder="패스워드">
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-block">로그인하기</button>
+                    <a href="/auth/facebook" class="undecorated-link">
+                      <img class="login_button_size" src="/modules/users/img/login_button.png">
+                    </a>
                   </div>
                   <div data-ng-show="error" class="text-center text-danger">
                     <strong data-ng-bind="error"></strong>
@@ -33,15 +35,15 @@
               </form>
             </div>
             <div class="col-md-6">
-              <ul class="list-unstyled">
-                <li>
+              <ul class="list-unstyled pull-right">
+                <li class="login_button">
                   <a href="/auth/facebook" class="undecorated-link">
-                    <img src="/modules/users/img/buttons/facebook.png">
+                    <img src="/modules/users/img/facebook_login_button.png">
                   </a>
                 </li>
-                <li>          
+                <li class="login_button">          
                   <a href="/auth/twitter" class="undecorated-link">
-                    <img src="/modules/users/img/buttons/twitter.png">
+                    <img src="/modules/users/img/twitter_login_button.png">
                   </a>
                 </li>
               </ul>
