@@ -14,10 +14,12 @@
 }
 .signup_container{
 	width:100%;
-	height:1500px;
+	height:auto;
 	background-image: url('../img/bg.jpg') ;
 	background-repeat:no-repeat ;
-	background-size: 100%;
+	background-size: 97%;
+  background-position-x: 18px;
+  background-position-y: -300px;
   clear: both;
 }
 
@@ -34,4 +36,78 @@
   padding:50px;  
 }
 
+.signup-list-header{
+    height: 285px;
+    position: relative;
+}
+.signup-list-header p{
+    padding-top: 275px;
+    font-size:40px;
+    color:white;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 1.1;
+}
+.signup-list-header .dummy01,
+.signup-list-header .dummy02,
+.signup-list-header .dummy03{
+    position: absolute;
+}
+
+.signup-list-header .title-text{
+  position:relative;
+  width: 500px;
+  height: 205px;
+  top: 0px;
+  left: 0px;
+  background:url('/modules/introduces/img/sub_title.png') no-repeat 50% 80px;
+
+}
+
+.signup-list-header .dummy01{
+    width: 145px;
+    height: 125px;
+    top: 40px;
+    left: 550px;
+    background: url('/modules/introduces/img/sub_speasship.png') no-repeat 0 0;
+}
+.signup-list-header .dummy02{
+    width: 158px;
+    height: 187px;
+    bottom: 30px;
+    left: 830px;
+    background: url('/modules/introduces/img/sub_speace_flag.png') no-repeat 0 0;
+}
+.signup-list-header .dummy03{
+    width: 219px;
+    height: 273px;
+    bottom: -87px;
+    left: 620px;
+    background: url('/modules/introduces/img/sub_speasman.png') no-repeat 0 0;
+}
+
+.signin_container{
+	width:100%;
+	height:auto;
+	background-image: url('../img/bg.jpg') ;
+	background-repeat:no-repeat ;
+	background-size: 97%;
+  background-position-x: 18px;
+  background-position-y: -300px;
+  clear: both;
+}
+.signin_info{
+    margin-bottom: 25px;
+    width:100%;
+    background-color:white;
+    border: 6px solid #4d6182;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.signin_form{
+  text-align:left;
+  padding:50px;  
+}
 
