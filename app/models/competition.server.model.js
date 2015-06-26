@@ -40,12 +40,11 @@ var CompetitionSchema = new Schema({
 		required: '국가를 적어주세요',
 		trim: true
 	},
-	//teamImg : {
-	//	type: String,
-	//	default: '',
-	//	required: 'Please fill teamImg',
-	//	trim: true
-	//},
+	teamImgName : {
+		type: String,
+		default: '',
+		trim: true
+	},
 	teamUrl : {
 		type: String,
 		default: '',
