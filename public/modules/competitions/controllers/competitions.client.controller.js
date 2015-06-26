@@ -12,6 +12,17 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 		$scope.userId = $scope.authentication.user.username;
 
 
+
+		if(additionalProvidersData){
+			if(additionalProvidersData.facebook){
+
+			}
+			if(additionalProvidersData.facebook){
+
+			}
+		}
+
+
 		// Create new Competition
 		$scope.create = function() {
 			// Create new Competition object
@@ -144,6 +155,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 					},function(){
 						$scope.likeCount = getLikeCount($scope.likes);
 						console.log($scope.likeCount);
+						$scope.uniLikeBtnFlag = true;
 					});
 				});
 
@@ -151,10 +163,63 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
-
-
 		}
 
+
+		$scope.fbLike = function(){
+			var like = new Likes ({
+				fbLike : 1,
+				competitionId : $scope.competition._id
+			});
+			console.log($scope.competition._id);
+
+			// Redirect after save
+			like.$update(like,function(response) {
+
+				$scope.likes = Comments.query({
+					competitionId: $stateParams.competitionId
+				},function(){
+					$scope.likes = Likes.query({
+						competitionId: $stateParams.competitionId
+					},function(){
+						$scope.likeCount = getLikeCount($scope.likes);
+						console.log($scope.likeCount);
+						$scope.fbLikeBtnFlag = true;
+					});
+				});
+			}, function(errorResponse,result) {
+				$scope.error = errorResponse.data.message;
+
+
+			});
+		}
+
+		$scope.twiLike = function(){
+			var like = new Likes ({
+				twiLike : 1,
+				competitionId : $scope.competition._id
+			});
+			console.log($scope.competition._id);
+
+			// Redirect after save
+			like.$update(like,function(response) {
+
+				$scope.likes = Comments.query({
+					competitionId: $stateParams.competitionId
+				},function(){
+					$scope.likes = Likes.query({
+						competitionId: $stateParams.competitionId
+					},function(){
+						$scope.likeCount = getLikeCount($scope.likes);
+						console.log($scope.likeCount);
+						$scope.twiLikeBtnFlag = true;
+					});
+				});
+			}, function(errorResponse) {
+				$scope.error = errorResponse.data.message;
+
+			});
+		}
 
 
 

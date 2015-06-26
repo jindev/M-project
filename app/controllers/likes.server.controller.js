@@ -47,20 +47,47 @@ exports.read = function(req, res) {
  */
 exports.update = function(req, res) {
 
+    var type ;
+    var updateData = {};
     var likeModel = new Like({
         uniLike : (req.query.uniLike)? 1 : 0 ,
         fbLike :(req.query.fbLike)? 1 : 0 ,
         twiLike : (req.query.twiLike)? 1 : 0,
         competitionId : req.query.competitionId,
-        user : Object.toString(req.user._id)
+        user : req.user._id
     });
 
-    Like.update({user : "12341234"},new Like(),{upsert : true},function(err) {
+    if(req.query.uniLike){
+        updateData = {
+            uniLike  : 1
+        }
+
+    }
+
+    if(req.query.fbLike){
+        updateData = {
+            fbLike  : 1
+    }
+    }
+
+    if(req.query.twiLike){
+        updateData = {
+            twiLike  : 1
+        }
+    }
+
+
+
+
+    Like.update({user : req.user._id},updateData,function(err,status) {
         if (err) {
             return res.status(400).send({
                 message: errorHandler.getErrorMessage(err)
             });
         } else {
+            if(status == 0){
+                likeModel.save();
+            }
             res.status(200).send();
         }
     });
