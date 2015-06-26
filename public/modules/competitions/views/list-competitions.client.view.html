@@ -3,7 +3,7 @@
         <h1>경연대회</h1>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="competition in competitions" data-ng-href="#!/competitions/{{competition._id}}" class="list-group-item">
+        <a data-ng-repeat="competition in competitions  | limitTo:3" data-ng-href="#!/competitions/{{competition._id}}" class="list-group-item">
 			<small class="list-group-item-text">
 				Posted on
 				<span data-ng-bind="competition.created | date:'medium'"></span>
@@ -14,16 +14,11 @@
             <youtube-video video-url="competition.teamUrl"></youtube-video>
         </a>
     </div>
-    <div>
-        <button>이전</button>
-        <ul>
-            <li>
-                <a ng-repeat="pageNumber in pageNumbers" ng-click="setPage(pageNumber)"
-                ng-class="{'active': selectedPage == pageNumber}"> {{ pageNumber }}
-                 </a>
-            </li>
-        </ul>
-        <button>다음</button>
-    </div>
+
+
+    <!-- 페이지 네이션 -->
+
+    <pagination items-per-page="3" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+
 
 </section>
