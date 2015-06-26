@@ -4,6 +4,7 @@
 		<p data-ng-bind="competition.description"></p>
 		<youtube-video video-url="competition.teamUrl"></youtube-video>
 	</div>
+	<img ng-src="modules/competitions/img/upload/{{competition.teamImgName}}.png">
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == competition.user._id))">
 		<a class="btn btn-primary" href="/#!/competitions/{{competition._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>

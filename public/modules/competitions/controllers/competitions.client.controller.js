@@ -46,7 +46,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 		// Create new Competition
 		$scope.create = function() {
 			// Create new Competition object
-			console.log($scope.teamImg);
+
 			var competition = new Competitions ({
 				name: this.name,
 				description : this.description,
@@ -54,7 +54,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 				address : this.address,
 				country : this.country,
 				teamUrl : this.teamUrl,
-				teamImg : this.teamImg
+				teamImgName : $scope.authentication.user.username
 			});
 
 			// Redirect after save

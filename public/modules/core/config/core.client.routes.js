@@ -12,5 +12,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: '/',
 			templateUrl: 'modules/core/views/home.client.view.html'
 		});
+		$urlRouterProvider.when('/competitions/create', 'modules/competitions/views/create-competition.client.view.html');
+		$urlRouterProvider.when('/competitions', 'modules/competitions/views/list-competitions.client.view.html');
 	}
 ]);
