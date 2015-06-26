@@ -119,7 +119,6 @@ exports.list = function(req, res) {
 
 
 exports.getUserLike = function(req,res){
-
     var userId = req.user._id;
 
     Like.find({"user" : userId},function(err, likes) {

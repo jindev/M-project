@@ -43,14 +43,9 @@ exports.upload = function(req,res){
 		})
 		.on('end', function() {
 			console.log('-> upload done');
-
 		});
-
 	form.parse(req, function(err, fields, files) {
-		var JS_Script = '<script>function Test() { confirm("test success"); } Test();</script>';
-		res.writeHead(200, {'Content-Type':'text/html'});
-		res.write(JS_Script);
-		res.end();
+		res.send(200);
 	});
 
 };
@@ -62,19 +57,15 @@ exports.create = function(req, res) {
 	var competition = new Competition(req.body);
 	competition.user = req.user;
 
-
-
-
-
-	//competition.save(function(err) {
-	//	if (err) {
-	//		return res.status(400).send({
-	//			message: errorHandler.getErrorMessage(err)
-	//		});
-	//	} else {
-	//		res.jsonp(competition);
-	//	}
-	//});
+	competition.save(function(err) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(competition);
+		}
+	});
 };
 
 
@@ -124,8 +115,12 @@ exports.delete = function(req, res) {
 /**
  * List of Competitions
  */
-exports.list = function(req, res) { 
-	Competition.find().sort('-created').populate('user', 'displayName').exec(function(err, competitions) {
+exports.list = function(req, res) {
+
+	var pageNumber = req.query.pageNumber;
+	var nPerPage = req.query.nPerPage;
+
+	Competition.find().sort('-created').skip(pageNumber > 0 ? ((pageNumber-1)*nPerPage) : 0).limit(nPerPage).exec(function(err, competitions) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)

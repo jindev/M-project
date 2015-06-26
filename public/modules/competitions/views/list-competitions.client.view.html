@@ -14,7 +14,16 @@
             <youtube-video video-url="competition.teamUrl"></youtube-video>
         </a>
     </div>
-    <div class="alert alert-warning text-center" data-ng-hide="!competitions.$resolved || competitions.length">
-    	No Competitions yet, why don't you <a href="/#!/competitions/create">참가 등록</a>?
+    <div>
+        <button>이전</button>
+        <ul>
+            <li>
+                <a ng-repeat="pageNumber in pageNumbers" ng-click="setPage(pageNumber)"
+                ng-class="{'active': selectedPage == pageNumber}"> {{ pageNumber }}
+                 </a>
+            </li>
+        </ul>
+        <button>다음</button>
     </div>
+
 </section>

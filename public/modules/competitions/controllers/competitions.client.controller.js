@@ -7,6 +7,19 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 		$scope.likeCount = 0;
 
 
+
+
+		$scope.setPage = function(pageNumber) {
+			console.log(pageNumber.title);
+			$scope.competitions = Competitions.query({
+				nPerPage : 3,
+				pageNumber : pageNumber.title
+			});
+			$scope.selectedPage = pageNumber;
+		}
+		//$scope.setPage($scope.pageNumbers[0]);
+
+
 		console.log($scope.authentication);
 
 		$scope.userId = $scope.authentication.user._id;
@@ -90,7 +103,9 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 		// Find a list of Competitions
 		$scope.find = function() {
-			$scope.competitions = Competitions.query();
+			$scope.competitions = Competitions.query({},function(data){
+				$scope.pageNumbers = data;
+			});
 		};
 
 
@@ -253,6 +268,20 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 			});
 		}
+
+		$scope.uploadFile = function(files) {
+			var fd = new FormData();
+			//Take the first selected file
+			fd.append("file", files[0]);
+
+			$http.post('/upload', fd, {
+				withCredentials: true,
+				headers: {'Content-Type': undefined },
+				transformRequest: angular.identity
+			}).success(function(){
+				alert();
+			}).error();
+		};
 
 
 
