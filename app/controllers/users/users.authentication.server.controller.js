@@ -7,7 +7,8 @@ var _ = require('lodash'),
 	errorHandler = require('../errors.server.controller'),
 	mongoose = require('mongoose'),
 	passport = require('passport'),
-	User = mongoose.model('User');
+	User = mongoose.model('User'),
+	Competition = mongoose.model('Competition');
 
 /**
  * Signup
@@ -68,6 +69,14 @@ exports.signin = function(req, res, next) {
 		}
 	})(req, res, next);
 };
+
+function checkAlreadyApply(id){
+	Competition.find({user: id },function(err,competition){
+		if(competition){
+			user.alreadyApply = true;
+		}
+	});
+}
 
 /**
  * Signout

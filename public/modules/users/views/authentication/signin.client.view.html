@@ -15,7 +15,7 @@
         <div class="signin_form">
           <div class="row">
             <div class="col-md-6">
-              <form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
+              <form name="userForm" data-ng-submit="signin()" class="signin form-horizontal" novalidate autocomplete="off">
                 <fieldset>
                   <div class="form-group">
                     <input type="email" id="email" name="email" class="form-control signin_button_size" data-ng-model="credentials.email" placeholder="이메일">
@@ -24,7 +24,7 @@
                     <input type="password" id="password" name="password" class="form-control signin_button_size" data-ng-model="credentials.password" placeholder="패스워드">
                   </div>
                   <div class="form-group">
-                    <a href="/auth/facebook" class="undecorated-link">
+                    <a href="/auth/signin" class="undecorated-link">
                       <img class="login_button_size" src="/modules/users/img/login_button.png">
                     </a>
                   </div>

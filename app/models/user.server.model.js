@@ -29,19 +29,19 @@ var UserSchema = new Schema({
 		type: String,
 		trim: true,
 		default: '',
-		validate: [validateLocalStrategyProperty, 'Please fill in your email'],
-		match: [/.+\@.+\..+/, 'Please fill a valid email address']
+		validate: [validateLocalStrategyProperty, '이메일을 입력해 주세요'],
+		match: [/.+\@.+\..+/, '이메일 형식에 맞지 않습니다.']
 	},
 	username: {
 		type: String,
 		unique: 'testing error message',
-		required: 'Please fill in a username',
+		required: '닉네임을 입력해주세요',
 		trim: true
 	},
 	password: {
 		type: String,
 		default: '',
-		validate: [validateLocalStrategyPassword, 'Password should be longer']
+		validate: [validateLocalStrategyPassword, '비밀번호는 8자 이상으로 해주세요']
 	},
 	salt: {
 		type: String

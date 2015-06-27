@@ -4,10 +4,10 @@
             <h1 class="sr-only">NEWS</h1>
             <menu class="buttons">
                 <li class="btn01">
-                    <a href="#"><span class="sr-only">참가자 등록</span></a>
+                    <a href="#!/competitions/create"><span class="sr-only">참가자 등록</span></a>
                 </li>
                 <li class="btn02">
-                    <a href="#"><span class="sr-only">참가자 리스트</span></a>
+                    <a href="#!/competitions"><span class="sr-only">참가자 리스트</span></a>
                 </li>
             </menu>
         </div>
@@ -17,13 +17,8 @@
 
         <div class="list-group">
             <a data-ng-repeat="news in news" data-ng-href="#!/news/{{news._id}}" class="list-group-item">
-    			<small class="list-group-item-text">
-    				Posted on
-    				<span data-ng-bind="news.created | date:'medium'"></span>
-    				by
-    				<span data-ng-bind="news.user.displayName"></span>
-    			</small>
     			<h4 class="list-group-item-heading" data-ng-bind="news.name"></h4>
+                <p data-ng-bind="news.content"></p>
             </a>
         </div>
     </div>

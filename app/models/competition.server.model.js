@@ -22,6 +22,24 @@ var CompetitionSchema = new Schema({
 		required: '팀 설명을 적어주세요',
 		trim: true
 	},
+	songTitle : {
+		type: String,
+		default: '',
+		required: '노래 제목을 적어주세요',
+		trim: true
+	},
+	songDesc : {
+		type: String,
+		default: '',
+		required: '장르 및 곡의 내용을 적어주세요',
+		trim: true
+	},
+	lyric : {
+		type: String,
+		default: '',
+		required: '노래 가사를 적어주세요',
+		trim: true
+	},
 	phoneNum : {
 		type: String,
 		default: '',
@@ -58,10 +76,6 @@ var CompetitionSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	},
-	comments:{
-		type:Array,
-		default: []
 	}
 });
 

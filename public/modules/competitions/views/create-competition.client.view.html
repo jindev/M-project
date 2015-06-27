@@ -24,6 +24,9 @@
             <div class="col-md-6">
               
               <form class="form-horizontal" enctype="multipart/form-data" data-ng-submit="create()" novalidate>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-default">
+                </div>
                 <fieldset>
                   <div class="form-group">
                     <label class="control-label" for="name"></label>
@@ -38,9 +41,24 @@
                       <input type="text" data-ng-model="description" id="description" class="form-control" placeholder="생년월일" required>
                     </div>
                   </div>
-                
-                
-                
+                  <div class="form-group">
+                    <label class="control-label" for="songTitle"></label>
+                    <div class="controls">
+                      <input type="text" data-ng-model="songTitle" id="songTitle" class="form-control" placeholder="노래 제목" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="songDesc"></label>
+                    <div class="controls">
+                      <input type="text" data-ng-model="songDesc" id="songDesc" class="form-control" placeholder="장르 및 곡의 내용을 적어주세요 " required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="lyric"></label>
+                    <div class="controls">
+                      <input type="textarea" data-ng-model="lyric" id="lyric" class="form-control" placeholder="가사 전체를 적어주세요 " required>
+                    </div>
+                  </div>
                   <div class="form-group">
                     <label class="control-label" for="phoneNum"></label>
                     <div class="controls">
@@ -94,9 +112,7 @@
                     </div>
                   </div>        
                   <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-                  <div class="form-group">
-                    <input type="submit" class="btn btn-default">
-                  </div>
+
                   
                 </div>
               </div>

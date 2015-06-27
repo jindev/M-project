@@ -39,6 +39,9 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			var competition = new Competitions ({
 				name: this.name,
 				description : this.description,
+				songTitle : this.songTitle,
+				songDesc : this.songDesc,
+				lyric : this.lyric,
 				phoneNum : this.phoneNum,
 				address : this.address,
 				country : this.country,
