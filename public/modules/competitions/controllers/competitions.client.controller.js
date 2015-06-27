@@ -106,6 +106,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			$scope.competitions =
 			Competitions.query({
 			},function(data){
+
 				$scope.totalItems = data.length;
 
 				$scope.setPage = function (pageNo) {

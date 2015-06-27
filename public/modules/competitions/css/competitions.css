@@ -1,3 +1,77 @@
+#list-competition {
+  background: url('/modules/competitions/img/banner.png') no-repeat 0 0;
+}
+#list-competition h2 {
+  padding: 0;
+  margin: 0;
+}
+#list-competition .pagination-wrap {
+  padding-bottom: 10px;
+  text-align: center;
+}
+.list-competition-header {
+  position: relative;
+  height: 480px;
+  width: 970px;
+  margin: 0 auto;
+}
+.list-competition-header .buttons {
+  bottom: 155px;
+  right: 0;
+  position: absolute;
+}
+.list-competition-header .buttons li {
+  display: block;
+  padding: 0 0 20px;
+}
+.list-competition-header .buttons a {
+  display: inline-block;
+  width: 242px;
+  height: 91px;
+  line-height: 107px;
+}
+.list-competition-header .buttons .btn01 a {
+    background: url('/modules/competitions/img/registration_btn.png') no-repeat 0 0;
+    background-size: cover;
+}
+.list-competition-header .buttons .btn02 a {
+    background: url('/modules/competitions/img/list_btn.png') no-repeat 0 0;
+    background-size: cover;
+}
+.list-group {
+  width: 970px;
+  margin: 0 auto;
+}
+.list-group .headline {
+  margin-top: 40px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #4d5e8a;
+}
+.list-group .headline h2 {
+  width: 252px;
+  height: 48px;
+}
+.list-group .headline-top4 h2 {
+  background: url('/modules/competitions/img/celeb_top4_tac.png') no-repeat 0 0;
+}
+.list-group .headline-application h2 {
+  background: url('/modules/competitions/img/application_tac.png') no-repeat 0 0;
+}
+.list-group .row {
+  margin: 15px -5px;
+}
+.list-group .row > div {
+  padding: 5px;
+}
+.list-group .context {
+  height: 310px;
+  background-color: #4e6182;
+}
+.list-group .context .thumbnail-view {
+  background-color: #e1e1e1;
+  height: 235px;
+}
+
 .button {
     -moz-appearance: button;
     /* Firefox */
