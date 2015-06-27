@@ -1,0 +1,32 @@
+#list-news {
+  background: url('/modules/competitions/img/banner.png') no-repeat 0 0;
+}
+.list-news-header {
+  position: relative;
+  height: 480px;
+  width: 970px;
+  margin: 0 auto;
+}
+.list-news-header .buttons {
+  bottom: 155px;
+  right: 0;
+  position: absolute;
+}
+.list-news-header .buttons li {
+  display: block;
+  padding: 0 0 20px;
+}
+.list-news-header .buttons a {
+  display: inline-block;
+  width: 242px;
+  height: 91px;
+  line-height: 107px;
+}
+.list-news-header .buttons .btn01 a {
+    background: url('/modules/competitions/img/registration_btn.png') no-repeat 0 0;
+    background-size: cover;
+}
+.list-news-header .buttons .btn02 a {
+    background: url('/modules/competitions/img/list_btn.png') no-repeat 0 0;
+    background-size: cover;
+}
