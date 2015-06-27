@@ -107,7 +107,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			Competitions.query({
 
 			},function(data){
-				alert(data.length);
+				// alert(data.length);
 				$scope.totalItems = data.length;
 			});
 		};
