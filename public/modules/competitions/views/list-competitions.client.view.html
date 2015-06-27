@@ -45,28 +45,10 @@
                 <h2><span class="sr-only">참가팀</span></h2>
             </div>
             <div class="row">
-                <div class="col-xs-6 col-sm-3">
+                <div class="col-xs-6 col-sm-3" data-ng-repeat="competition in competitions | limitTo:12" data-ng-href="#!/competitions/{{competition._id}}" class="list-group-item">
                     <div class="context">
-                        <div class="thumbnail-view"></div>
-                        <div class="info-view"></div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3">
-                    <div class="context">
-                        <div class="thumbnail-view"></div>
-                        <div class="info-view"></div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3">
-                    <div class="context">
-                        <div class="thumbnail-view"></div>
-                        <div class="info-view"></div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-3">
-                    <div class="context">
-                        <div class="thumbnail-view"></div>
-                        <div class="info-view"></div>
+                        <div class="thumbnail-view" ><youtube-video video-url="competition.teamUrl" class="team_video"></youtube-video></div>
+                        <div class="info-view" data-ng-bind="competition.name"></div>
                     </div>
                 </div>
             </div>

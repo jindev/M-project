@@ -24,12 +24,12 @@
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">
-			<li ui-route="/signup" ng-class="{active: $uiRoute}">
-				<a href="/#!/signup">회원가입</a>
-			</li>
-			<li class="divider-vertical"></li>
 			<li ui-route="/signin" ng-class="{active: $uiRoute}">
 				<a href="/#!/signin">로그인</a>
+			</li>
+			<li class="divider-vertical"></li>
+			<li ui-route="/signup" ng-class="{active: $uiRoute}">
+				<a href="/#!/signup">회원가입</a>
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
@@ -52,6 +52,9 @@
 						<a href="/auth/signout">로그아웃</a>
 					</li>
 				</ul>
+			</li>
+			<li ui-route="/competitions" ng-class="{active: $uiRoute}">
+				<a href="/#!/competitions">MY PAGE</a>
 			</li>
 		</ul>
 	</nav>

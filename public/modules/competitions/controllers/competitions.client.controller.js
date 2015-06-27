@@ -9,18 +9,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 
 
-		$scope.setPage = function(pageNumber) {
-			console.log(pageNumber.title);
-			$scope.competitions = Competitions.query({
-				nPerPage : 3,
-				pageNumber : pageNumber.title
-			});
-			$scope.selectedPage = pageNumber;
-		}
-		//$scope.setPage($scope.pageNumbers[0]);
 
-
-		console.log($scope.authentication);
 
 		$scope.userId = $scope.authentication.user._id;
 
@@ -117,7 +106,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 				$scope.pageChanged = function() {
 
 					$scope.competitions = Competitions.query({
-						nPerPage : 3,
+						nPerPage : 12,
 						pageNumber : $scope.currentPage
 					});
 				};

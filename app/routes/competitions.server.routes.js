@@ -21,4 +21,6 @@ module.exports = function(app) {
 
 	app.route('/checkAlreadyRegi')
 		.get(users.requiresLogin,competitions.checkAlreadyRegi);
+	app.route('/competition/:userId')
+		.get(users.requiresLogin,competitions.checkAlreadyRegi);
 };

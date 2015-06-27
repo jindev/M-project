@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
-	function($scope, $http, $location, Authentication) {
+angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication','$window',
+	function($scope, $http, $location, Authentication,$window) {
 		$scope.authentication = Authentication;
 
 		// If user is signed in then redirect back home
@@ -13,7 +13,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 
 				// And redirect to the index page
-				$location.path('/');
+				$window.history.back();
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
@@ -24,8 +24,11 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				// If successful we assign the response to the global user model
 				$scope.authentication.user = response;
 
+				$http.get('/competitions')
+
+
 				// And redirect to the index page
-				$location.path('/');
+				$window.history.back();
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
