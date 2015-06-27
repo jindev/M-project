@@ -1,76 +1,79 @@
 <section class="mypage_section" data-ng-controller="CompetitionsController" data-ng-init="findOne()">
-	<div class="container-fluid">
-		<div class="page-header">
-			<div class="row">
-				<div class="col-md-6">
-					<youtube-video class="band_video" video-url="competition.teamUrl"></youtube-video>
-				</div>
-				<div class="col-md-6">
-					<div class="col-md-5">
-					<img class="teamImg" ng-src="modules/competitions/img/upload/{{competition.teamImgName}}.png">
-					</div>
-					<h1 data-ng-bind="competition.name"></h1>
-				</div>
-				<div class="col-md-6 like_con">
-					<p data-ng-bind="competition.description"></p>
-					<button ng-click="fbLike()" data-ng-model="fbLikeBtn" ng-disabled="fbLikeBtnFlag" >
-						<img class="fbLikeImg" src="modules/competitions/img/facebook_like_btn.png">
-					</button>
-					<button ng-click="twiLike()" data-ng-model="twiLikeBtn" ng-disabled="twiLikeBtnFlag" >
-						<img class="fbLikeImg" src="modules/competitions/img/twiter_like_btn.png">
-					</button>
-					<button ng-click="uniLike()" data-ng-model="uniLikeBtn" ng-disabled="uniLikeBtnFlag" >
-						<img class="fbLikeImg" src="modules/competitions/img/unimusic_like_btn.png">
-					</button>
-				</div>
-			</div>
-		</div>
+  <div class="container-fluid">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-md-6">
+          <youtube-video class="band_video" video-url="competition.teamUrl"></youtube-video>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-5">
+            <img class="teamImg" ng-src="modules/competitions/img/upload/{{competition.teamImgName}}.png">
+          </div>
+          <h1 class="band_name" data-ng-bind="competition.name"></h1>
+        </div>
+        <div class="col-md-6 like_con">
+          <p class="message_desc" data-ng-bind="competition.description"></p>
+          
+          <div class="like_button_desc"># 좋아요를 누르시면 참가 뮤지션의 점수가 올라갑니다.</div>
+          <button ng-click="fbLike()" data-ng-model="fbLikeBtn" ng-disabled="fbLikeBtnFlag" >
+            <img class="fbLikeImg" src="modules/competitions/img/facebook_like_btn.png">
+          </button>
+          <button ng-click="twiLike()" data-ng-model="twiLikeBtn" ng-disabled="twiLikeBtnFlag" >
+            <img class="fbLikeImg" src="modules/competitions/img/twiter_like_btn.png">
+          </button>
+          <button ng-click="uniLike()" data-ng-model="uniLikeBtn" ng-disabled="uniLikeBtnFlag" >
+            <img class="fbLikeImg" src="modules/competitions/img/unimusic_like_btn.png">
+          </button>
+        </div>
+      </div>
+    </div>
 
 
-		<!--<button ng-click="backToList()">목록</button>-->
+    <!--<button ng-click="backToList()">목록</button>-->
 
-		<div class="comment_con">
-			<div class="comment_sub_con">
-				<h3>응원의 메세지를 남겨주세요!</h3>
-				<img class="commen_line" src="modules/competitions/img/schedule_line.png">
-				<form class="form-horizontal" data-ng-submit="addComment()" novalidate>
-					<fieldset>
-						<div class="form-group">
-							<div class="controls col-md-8">
-								<input type="text" data-ng-model="commentContent" class="comment_input" class="form-control" placeholder="comment" required>
-							</div>
-							<div class="controls col-md-4">
-								<button class="commen_add_btn" type="submit" class="btn btn-default">
-									등록
-								</button>
-							</div>
-						</div>
-						<div class="form-group">
-						</div>
-					</fieldset>
-				</form>
+    <div class="comment_con">
+      <div class="comment_sub_con">
+        <h3>응원의 메세지를 남겨주세요!</h3>
+        <img class="commen_line" src="modules/competitions/img/schedule_line.png">
+        <form class="form-horizontal" data-ng-submit="addComment()" novalidate>
+          <fieldset>
+            <div class="form-group">
+              <div class="controls col-md-8">
+                <input type="text" data-ng-model="commentContent" class="comment_input" class="form-control comment_row" placeholder="comment" required>
+              </div>
+              <div class="controls col-md-4">
+                <button class="commen_add_btn" type="submit" class="btn btn-default">
+                  등록
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+            </div>
+          </fieldset>
+        </form>
 
-				<ul>
-					<li class="comment_content" data-ng-repeat="comment in comments">{{comment.commentContent}}</li>
-				</ul>
+        <ul class="list-unstyled">
+          <li class="comment_content" data-ng-repeat="comment in comments">{{comment.commentContent}}<span ng-model="{{authentication.user.nickname}}"></span></li>
+        </ul>
 
-			</div>
+      </div>
 
-			<!-- 페이지 네이션 -->
+      <!-- 페이지 네이션 -->
+<div class="pagination-centered">
+      <pagination class="pagination_comment" items-per-page="3" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></pagination>
 
-			<pagination items-per-page="3" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+    </div>
+  </div>
+  </div>
 
-		</div>
-	</div>
-
-	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == competition.user._id))">
-		<a class="btn btn-primary" href="/#!/competitions/{{competition._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-	</div>
+  <!-- <div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == competition.user._id))">
+    <a class="btn btn-primary" href="/#!/competitions/{{competition._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" data-ng-click="remove();">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div> -->
 
 
 </section>
