@@ -141,8 +141,6 @@ exports.list = function(req, res) {
 			}
 		});
 	}
-
-
 };
 
 /**
@@ -167,3 +165,15 @@ exports.hasAuthorization = function(req, res, next) {
 	}
 	next();
 };
+
+exports.checkAlreadyRegi = function(req, res){
+
+	Competition.find({user: req.user._id}).exec(function (err, competition) {
+		if (err){
+
+		}
+		res.send(competition);
+
+
+	});
+}

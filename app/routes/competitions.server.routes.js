@@ -18,4 +18,7 @@ module.exports = function(app) {
 
 	// Finish by binding the Competition middleware
 	app.param('competitionId', competitions.competitionByID);
+
+	app.route('/checkAlreadyRegi')
+		.get(users.requiresLogin,competitions.checkAlreadyRegi);
 };

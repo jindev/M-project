@@ -20,6 +20,78 @@
     border: 5px dashed blue;
 }
 
+
+/* 마이페이지 */
+
+.mypage_section{
+ background-image: url('../img/bg.jpg');
+}
+
+.mypage_section .page-header{
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height :600px;
+    background-color: white;
+    border:4px solid #4d6182;
+}
+.mypage_section .page-header .row{
+    margin-top: 40px;
+}
+
+.band_video{
+
+    width: 100%;
+}
+.teamImg{
+    width: 100%;
+}
+.like_con button{
+    background: none;
+    outline: 0;
+    border: 0;
+}
+
+.comment_con{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height :600px;
+    background-color: white;
+    border:4px solid #4d6182;
+}
+
+.comment_sub_con{
+    width: 90%;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.commen_line{
+    width: 100%;
+}
+
+.comment_input{
+    height:80px;
+    font-size:18px;
+    width: 100%;
+}
+
+.commen_add_btn{
+    width: 100%;
+    height:80px;
+    background-color: #22d2a7;
+    outline: 0;
+    border: 0;
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.comment_content{
+    font-size:18px;
+}
+
 .notice-description{  
   text-align: right;
 }
@@ -32,3 +104,4 @@
   display:inline;
   margin-right:30px;
 }
+
