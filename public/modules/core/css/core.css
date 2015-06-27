@@ -193,3 +193,28 @@ footer #footer_container #copyright{
 footer #footer_container span{
 	color :#ff6c11;
 }
+
+
+@media screen and (max-width:480px){ 
+
+  .navbar-toggle{
+  display: block!important;
+   border:1px solid #333333;
+   position:absolute;
+   right:3%;
+ }
+ 
+ .navbar-brand{
+   display:none!important;
+ }
+ 
+ .navbar-inverse{
+   min-width:0px;
+   display:block!important;
+ }
+   
+   header .container {
+   
+   }
+ 
+}
