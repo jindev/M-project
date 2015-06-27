@@ -1,77 +1,197 @@
 <section data-ng-controller="IntroducesController" id="intro_section">
     <div class="container-fluid intro_container">
         <div class="introduces-list-header">
-            <p>"음악의 힘이 세상을 바꿀수 있다."<br>당신이 바로 그 주인공!</p>
-            <div class="dummy01"></div>
-            <div class="dummy02"></div>
-            <div class="dummy03"></div>
+            <menu class="buttons">
+                <li class="btn01">
+                    <a href="#"><span class="sr-only">참가자 등록</span></a>
+                </li>
+                <li class="btn02">
+                    <a href="#"><span class="sr-only">참가자 리스트</span></a>
+                </li>
+            </menu>
+            <div class="organization">
+                <div class="organization-left"></div>
+                <div class="organization-list"><div class="list"></div></div>
+                <div class="organization-right"></div>
+            </div>
         </div>
-        <article id="join_guide">
-            <h2>
-                <img src="modules/introduces/img/registerinfo_tac.png" alt="참가방법">
-                <em>(접수기간: 2015년 7월 1일 - 7월 31일 까지)<br/></em>
-            </h2>
+        <article class="join-introduce-description">
+            <h2><span class="sr-only">행사소개</span></h2>
+            <div class="context">
+                <p>
+                    <strong>통일부와 브이엔터테인먼트가 개최하는</strong> &lt;유니뮤직 레이스 2015&gt; (Uni-Music Race 2015,
+                    이하 UMR 2015)는 음악의 힘이 세상을 바꿀 수 있다고 믿는 젊은 뮤지션들을 위한
+                    창작음악 경연대회입니다.
+                </p>
+
+                <p>
+                    <strong>&lt;UMR 2015&gt;</strong>는 지금까지의 음악 컴피티션, 오디션과는 다릅니다.
+                    <strong>&lt;UMR 2015&gt;</strong>는 장르와 스타일, 밴드와 솔로 아티스트의 경계를 허물고 음악을 향한
+                    열정과 뚜렷한 주제와 신념, 자신만의 목소리를 가진 뮤지션을 발굴하는 자리입니다.
+                </p>
+
+                <p>
+                    천편일률적인 남녀 간의 사랑 이야기가 아닌 <strong>'PEACE'(평화를 꿈꾸며), ‘TOGETHER’(우리
+                        함께), ‘WISH’(희망을 믿어요)</strong>라는 보편적인 메시지를 음악에 담아 우리 시대와 미래를
+                    노래하는 젊은 뮤지션들의 많은 참여 바랍니다.
+                </p>
+
+                <p>
+                    총 상금 1900만원 중 대상 1팀에게는 1000만원, 금상 1팀에게는 500만원,
+                    은상 2팀에게는 각각200만원의 상금이 주어집니다.
+                    대상에게는 <strong>통일부장관상</strong>이 수여되며, 수상자 모두에게는 컴필레이션 앨범 참여 기회가
+                    주어집니다.
+                </p>
+            </div>
+        </article>
+        <article class="join-introduce-handbook">
+            <h2><span class="sr-only">행사요강</span></h2>
+            <div class="contexts">
+                <div class="context">
+                    <div class="dummy"></div>
+                    <h3>참가조건</h3>
+                    <p>1. 국내 거주 중인 신인 창작음악인 또는 3년 이내에 정규 앨범 1장 이하를 발매한 뮤지션이면 누구나 참여 가능.<br>
+                    (데뷔일은 첫 앨범 발매일 / 외국인은 ‘외국인 등록자’ (90일 이상 체류자)인 경우 가능)</p>
+                    <p>2. 무대공연이 가능해야 하며 버스킹 공연 및 결선 공연에 참여할 수 있어야 함.</p>
+                </div>
+                <div class="context">
+                    <div class="dummy"></div>
+                    <h3>참가곡</h3>
+                    <p>1. 아래의 키워드를 주제로 한 순수 창작곡.(단, 가사 및 가창이 없는 연주곡은 참가 불가)<br>
+                    - Peace : &lt;평화를 꿈꾸며&gt; 우리가 진정으로 바라는 화해와 평화의 이상을 담은 노래<br>
+                    - Together : &lt;우리 함께&gt; 남과 북, 우리 세대와 다음 세대가 함께 만들어갈 메시지를 담은 노래<br>
+                    - Wish : &lt;희망을 믿어요&gt; 우리가 꿈꾸는 더 행복한 미래, 우리의 희망을 담은 노래<br>
+                    ※ 참가 지원시 참가곡의 주제에 대한 간단한 설명을 게재해야 하며 해당 주제에서 벗어난 곡은 자동으로 심사에서 제외됩니다.</p>
+                    <p>2. 창작곡의 가사는 50% 이상 국문을 활용</p>
+                    <p>3. 자신의 미발표곡 또는 본인 저작권의 기존 발표곡을 편곡 및 개사해 참여 가능.</p>
+                    <p>4. 저작권 침해 판단이 되는 곡은 등록 불가.(저작권 침해 시 불이익이 돌아갈 수 있습니다.)</p>
+                </div>
+                <div class="context">
+                    <div class="dummy"></div>
+                    <h3>참가방법 <em>(접수기간 : 2015년 7월 1일 ~ 7월31일 까지)</em></h3>
+                    <ul class="row">
+                        <li class="col-xs-6 col-sm-3 reg01">
+                            <div class="block">
+                                <div class="dummy"></div>
+                                <h3>유니뮤직레이스<br>공식 홈페이지에</h3>
+                                <p>
+                                    <strong>회원가입</strong><br>
+                                    &lt;유니뮤직레이스 2015&gt; 에
+                                    관해 궁금하신 사항은 이메일
+                                    unimusic2015@gmail.com
+                                    으로 문의 부탁드립니다.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="col-xs-6 col-sm-3 reg02">
+                            <div class="block">
+                                <div class="dummy"></div>
+                                <h3>유튜브에<br>참가곡 영상 등록</h3>
+                                <p>
+                                    온라인 심사가 가능한<br>
+                                    퀄리티의 영상을 만들어<br>
+                                    주세요.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="col-xs-6 col-sm-3 reg03">
+                            <div class="block">
+                                <div class="dummy"></div>
+                                <p>
+                                    1. 공식 홈페이지<br>기본 프로필을<br>작성 후 <b>참가 신청</b>
+                                </p>
+                                <p>
+                                    2. 참가곡의 <b>유튜브<br>영상 URL을 등록</b>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="col-xs-6 col-sm-3 reg04">
+                            <div class="block">
+                                <div class="dummy"></div>
+                                <p>
+                                    참가 신청 완료 후<br>
+                                    본인의 개별 페이지가<br>
+                                    생성되고 홈페이지에<br>
+                                    정식 게시됩니다.<br>
+                                    <b>7월 31일 참가신청<br>
+                                    종료 후 페이지 수정 불가</b>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="context">
+                    <div class="dummy"></div>
+                    <h3>온라인 투표(8.1~8.31) 및 본선 참가자 선정(9.8)</h3>
+                    <p>1. 8월 1일부터 팬 및 지인, 불특정 다수에게 자신의 페이지를 적극적으로 홍보해주세요. 온라인 투표는 페이스북 계정, 
+                    트위터 계정, 홈페이지 로그인 계정까지 각각 1회씩 가능합니다.(1인 최대 3회 투표 가능)</p>
+                    <p>2. 전문 심사위원의 심사 점수(70%)와 온라인 투표 점수(30%)를 합산, TOP12가 선정됩니다. (*전문 심사위원 점수는 
+                    곡의 완성도(50점), 곡의 해석도(50점) 총 100점 만점이며 전문 심사위원 점수는 공개되지 않습니다.)</p>
+                </div>
+                <div class="context">
+                    <div class="dummy"></div>
+                    <h3>버스킹 공연 (9.19)</h3>
+                    <p>TOP12는 9월 중순 홍대, 신촌 일대 거리에서 버스킹 공연을 진행합니다. 버스킹 공연을 통해 자신의 노래와 음악을 
+                    시민들에게 직접 들려주고 적극적으로 홍보를 펼칠 예정입니다. 이날 버스킹 공연은 최종 심사에 반영됩니다.</p>
+                </div>
+                <div class="context">
+                    <div class="dummy"></div>
+                    <h3>결선 공연 (10.3)</h3>
+                    <p>1. TOP12는 10월 3일 레진코믹스V-HALL에서 결선 공연을 진행하며 관객투표(20%), 심사위원 평가(70%), 
+                    버스킹 공연(10%)을 합산 하여 대상 1팀 / 금상 1팀 / 은상 2팀 총 4팀이 선정됩니다. (결선 공연은 각 팀당 참가곡 1곡 공연. 
+                    관객 투표는 1인 2표제)</p>
+                    <p>2. 결선 공연의 심사위원 점수는 곡의 완성도(50점), 곡의 해석도(30점), 라이브능력(20점) 총 100점 만점으로 채점 됩니다.</p>
+                </div>
+            </div>
+        </article>
+        <article class="join-introduce-award">
+            <h2><span class="sr-only">시상내역</span></h2>
             <ul class="row">
-                <li class="col-xs-6 col-sm-3 reg01">
-                    <div class="block">
+                <li class="col-xs-6 col-md-4 award01">
+                    <div class="award-desc">
                         <div class="dummy"></div>
-                        <h3>유니뮤직레이스<br>공식 홈페이지에</h3>
-                        <p>
-                            <strong>회원가입</strong><br>
-                            &lt;유니뮤직레이스 2015&gt; 에<br>
-                            관해 궁금하신 사항은 이메일<br>
-                            unimusic2015@gmail.com<br>
-                            으로 문의 부탁드립니다.
-                        </p>
+                        <div class="context">
+                            <h3>통일부 장관상</h3>
+                            <p>대상에게는 통일부 장관상이<br>수여 됩니다.</p>
+                        </div>
                     </div>
                 </li>
-                <li class="col-xs-6 col-sm-3 reg02">
-                    <div class="block">
+                <li class="col-xs-6 col-md-4 award02">
+                    <div class="award-desc">
                         <div class="dummy"></div>
-                        <h3>유튜브에<br>참가곡 영상 등록</h3>
-                        <p>
-                            온라인 심사가 가능한<br>
-                            퀄리티의 영상을 만들어<br>
-                            주세요.
-                        </p>
+                        <div class="context">
+                            <h3>총 상금 1900만원</h3>
+                            <p><strong>대상 (1팀) <b>1000만원</b></strong><br>금상 (1팀) 500만원<br>은상 (2팀) 각 200만원</p>
+                        </div>
                     </div>
                 </li>
-                <li class="col-xs-6 col-sm-3 reg03">
-                    <div class="block">
+                <li class="col-xs-6 col-md-4 award03">
+                    <div class="award-desc">
                         <div class="dummy"></div>
-                        <p>
-                            1. 공식 홈페이지<br>기본 프로필을<br>작성 후 <b>참가 신청</b>
-                        </p>
-                        <p>
-                            2. 참가곡의 <b>유튜브<br>영상 URL을 등록</b>
-                        </p>
-                    </div>
-                </li>
-                <li class="col-xs-6 col-sm-3 reg04">
-                    <div class="block">
-                        <div class="dummy"></div>
-                        <p>
-                            참가 신청 완료 후<br>
-                            본인의 개별 페이지가<br>
-                            생성되고 홈페이지에<br>
-                            정식 게시됩니다.<br>
-                            <b>7월 31일 참가신청<br>
-                            종료 후 페이지 수정 불가</b>
-                        </p>
+                        <div class="context">
+                            <h3>컴필레이션 앨범<br>참여</h3>
+                            <p>상위 4팀 에게는 컴필레이션<br>앨범참여의 기회가<br>주어집니다</p>
+                        </div>
                     </div>
                 </li>
             </ul>
+            <div class="dummy"></div>
         </article>
-        <article id="join_info">
-            <h2>
-                <img src="modules/introduces/img/registerinfo_tac.png" alt="참가자 준비사항 안내">
-            </h2>
-            <p>
-                1) 유니뮤직레이스 홈페이지 회원가입<br>
-                2) 참가곡 영상 유튜브 등록<br>
-                3) 팀 프로필 사진 및 설명글 준비
-            </p>
+        <article class="join-introduce-location">
+            <h2><span class="sr-only">Location</span></h2>
+            <p><strong>&lt;<b>본선 버스킹 공연장</b>&gt;</strong> 9.19(토)<br>홍대거리 일대 (추후 공지)</p>
+
+            <p><strong>&lt;<b>결선공연장</b>&gt;</strong> 10.3(토)<br>유니뮤직레이스 2015 결선 페스티벌에 오시는 길을 안내해 드립니다.</p>
+
+            <p><strong><b>레진코믹스 브이홀</b></strong><br>서울특별시 마포구 홍익로 25<br>서울특별시 마포구 서교동 356-1 서교호텔별관 지하 3층<br><a href="http://www.vhall.co.kr/" target="_blank">www.vhall.co.kr/</a></p>
+            
+            <div>
+                  <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EB%A7%88%ED%8F%AC%EA%B5%AC+%EC%84%9C%EA%B5%90%EB%8F%99+356-1/@37.5546931,126.9219492,18z/data=!4m2!3m1!1s0x357c98c4aae7d3f5:0xb3fa0c03ba27a17" class="undecorated-link">
+                    <img src="/modules/introduces/img/google_map.jpg">
+                  </a>              
+            </div>
+            
+            <p><strong>&lt;<b>대중교통</b>&gt;<br>지하철 - 2호선(홍대입구)<br>버스 - 일반72,  간선273, N26, N62</strong></p>
         </article>
-        <div class="common-button"><a href="#" class="btn-registration"><span class="sr-only">참가자 등록</span></a></div>
     </div>
 </section>
