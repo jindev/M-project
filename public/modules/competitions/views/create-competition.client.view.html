@@ -24,6 +24,9 @@
             <div class="col-md-6">
               
               <form class="form-horizontal" enctype="multipart/form-data" data-ng-submit="create()" novalidate>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-default">
+                </div>
                 <fieldset>
                   <div class="form-group">
                     <label class="control-label" for="name"></label>
@@ -94,9 +97,7 @@
                     </div>
                   </div>        
                   <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-                  <div class="form-group">
-                    <input type="submit" class="btn btn-default">
-                  </div>
+                  
                   
                 </div>
               </div>
