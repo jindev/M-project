@@ -337,3 +337,10 @@
     line-height: 107px;
     background: url('/modules/introduces/img/registration_btn.png') no-repeat 0 0;
 }
+
+
+.join-introduce-location div{
+  background-size: 100%;
+  margin-bottom: 30px !important;
+  width: 100%;
+}
