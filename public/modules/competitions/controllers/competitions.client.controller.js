@@ -105,11 +105,29 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 		$scope.find = function() {
 			$scope.competitions =
 			Competitions.query({
-
 			},function(data){
-				// alert(data.length);
+
 				$scope.totalItems = data.length;
+
+				$scope.setPage = function (pageNo) {
+					console.log(pageNo);
+					$scope.currentPage = pageNo;
+				};
+
+				$scope.pageChanged = function() {
+
+					$scope.competitions = Competitions.query({
+						nPerPage : 3,
+						pageNumber : $scope.currentPage
+					});
+				};
+
+				$scope.maxSize = 10;
+
 			});
+
+			$scope.isViewPage = false;
+			$scope.isListPage = true;
 		};
 
 
@@ -137,12 +155,29 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 		// Find existing Competition
 		$scope.findOne = function() {
+
+			$scope.isViewPage = true;
+			$scope.isListPage = false;
+
 			$scope.competition = Competitions.get({
 				competitionId: $stateParams.competitionId
 			});
 
 			$scope.comments = Comments.query({
 				competitionId: $stateParams.competitionId
+			},function(comments){
+
+				$scope.totalItems = comments.length;
+				$scope.setPage = function (pageNo) {
+					$scope.currentPage = pageNo;
+				};
+
+				$scope.pageChanged = function() {
+
+				};
+
+				$scope.maxSize = 10;
+
 			});
 
 			$scope.likes = Likes.query({
@@ -154,7 +189,6 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 
 			$scope.getUserLike();
-
 
 
 		};
@@ -295,7 +329,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 				headers: {'Content-Type': undefined },
 				transformRequest: angular.identity
 			}).success(function(){
-				alert();
+				alert("이미지 등록이 완료되었습니다.");
 			}).error();
 		};
 
@@ -304,26 +338,11 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 		//페이지네이션
 
-
 		$scope.currentPage = 1;
 
 
-		$scope.setPage = function (pageNo) {
-			console.log(pageNo);
-			$scope.currentPage = pageNo;
-		};
-
-		$scope.pageChanged = function() {
-
-			$scope.competitions = Competitions.query({
-				nPerPage : 3,
-				pageNumber : $scope.currentPage
-			});
 
 
-		};
-
-		$scope.maxSize = 10;
 
 
 
@@ -338,9 +357,6 @@ function getLikeCount(likes){
 	}
 	return count;
 }
-
-
-
 }]);
 
 
