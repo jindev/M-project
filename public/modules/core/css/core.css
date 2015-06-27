@@ -135,10 +135,22 @@
 	font-weight: bold;
 }
 
+
+#competition_judge_con{
+	margin-top: 40px;
+}
+
 #competition_judge_tag{
 	margin-bottom:40px;
 }
-
+.gold_award{
+ margin-bottom: 0;
+}
+.award_text p:nth-child(2){
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 
@@ -182,7 +194,8 @@ footer #footer_container #footer_info{
 	margin-top: 20px;
 }
 footer #footer_container #footer_info p{
-	font-size: 18px;
+ 	font-size: 16px;
+	margin-bottom: 3px;
 }
 
 footer #footer_container #copyright{
