@@ -1,234 +1,232 @@
 .content {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
-#title_container{
-	width:100%;
-	height:1300px;
-	background-image: url('../img/main_bg.jpg') ;
-	background-repeat:no-repeat ;
-	background-size: 100%;
-	text-align: center;
-
-}
-.competition_main_slogan_con{
-	height:200px;
-	text-align: center;
-}
-.competition_main_slogan_con img{
-
-	padding-top:30px;
-
+#title_container {
+  width: 100%;
+  height: 1300px;
+  background-image: url('../img/main_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
 }
 
-#competition_con{
-	padding-top:1000px;
-}
-#competition_con a{
-	margin-left:30px;
+.competition_main_slogan_con {
+  height: 200px;
+  text-align: center;
 }
 
-#organization{
-	margin-top: 50px;
-}
-#competition_info_con{
-
+.competition_main_slogan_con img {
+  padding-top: 30px;
 }
 
-
-#competition_info_con .container{
- padding-top:50px;
- width:90%;
+#competition_con {
+  padding-top: 1000px;
 }
 
-#competition_main_info_con{
-	background-color:#4d6182;
+#competition_con a {
+  margin-left: 30px;
+}
+
+#organization {
+  margin-top: 50px;
+}
+
+#competition_info_con {
+}
+
+#competition_info_con .container {
+  padding-top: 50px;
+  width: 90%;
+}
+
+#competition_main_info_con {
+  background-color: #4d6182;
 }
 
 #competition_main_info {
-	font-size:18px;
-	color:white;
+  font-size: 18px;
+  color: white;
 }
 
-#competition_main_info span{
-	color:#22d2a7;
+#competition_main_info span {
+  color: #22d2a7;
 }
 
-#competition_date{
-	padding-top:40px;
-	margin-bottom:40px;
-	height:500px;
-}
-#schedule_info_img{
-	padding-top:40px;
-	margin-left:40px;
+#competition_date {
+  padding-top: 40px;
+  margin-bottom: 40px;
+  height: 500px;
 }
 
-#competition_award_con{
- background-color:#22d2a7;
-	height:auto;
-	padding-bottom:40px;
- }
-
-#competition_award_con .container{
-	padding-top:50px;
-	width:90%;
-	padding:0;
-}
-#award_tag{
-	padding-top :40px;
-
-}
-.award_con{
-
-	border:#4d6182 solid 3px ;
-	height:300px;
-	margin:0;
-	padding:0;
-	background-color: white;
-	text-align: center;
+#schedule_info_img {
+  padding-top: 40px;
+  margin-left: 40px;
 }
 
-#competition_award_con .row{
-	padding-top :40px;
+#competition_award_con {
+  background-color: #22d2a7;
+  height: auto;
+  padding-bottom: 40px;
 }
 
-.award_img{
-	background-color: #4d6182;
-	width:100%;
-	height:150px;
+#competition_award_con .container {
+  padding-top: 50px;
+  width: 90%;
+  padding: 0;
 }
 
-.award_img img{
-	margin-top: 20px;
-	margin-bottom: 20px;
+#award_tag {
+  padding-top: 40px;
 }
 
-.award_text{
-	width:100%;
-	font-weight: bold;
+.award_con {
+  border: #4d6182 solid 3px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  text-align: center;
 }
 
-.award_text p{
-  font-size:14px;
-}
-.award_text p span{
-	font-size:18px;
-	color:#ff6c11;
+#competition_award_con .row {
+  padding-top: 40px;
 }
 
-
-
-.award_text p span span{
-	font-size:20px;
+.award_img {
+  background-color: #4d6182;
+  width: 100%;
+  height: 150px;
 }
 
-
-.judge_text h3{
-	color:#ff6c11;
-}
-.judge_text h3 span{
-	color:#4d6182;
-	font-size: 14px;
-}
-.judge_text{
-	font-weight: bold;
+.award_img img {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-
-#competition_judge_con{
-	margin-top: 40px;
+.award_text {
+  width: 100%;
+  font-weight: bold;
 }
 
-#competition_judge_tag{
-	margin-bottom:40px;
-}
-.gold_award{
- margin-bottom: 0;
-}
-.award_text p:nth-child(2){
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+.award_text p {
+  font-size: 14px;
 }
 
+.award_text p span {
+  font-size: 18px;
+  color: #ff6c11;
+}
 
+.award_text p span span {
+  font-size: 20px;
+}
 
+.judge_text h3 {
+  color: #ff6c11;
+}
+
+.judge_text h3 span {
+  color: #4d6182;
+  font-size: 14px;
+}
+
+.judge_text {
+  font-weight: bold;
+}
+
+#competition_judge_con {
+  margin-top: 40px;
+}
+
+#competition_judge_tag {
+  margin-bottom: 40px;
+}
+
+.gold_award {
+  margin-bottom: 0;
+}
+
+.award_text p:nth-child(2) {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .undecorated-link:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none !important;
-}
-.ng-invalid.ng-dirty {
-	border-color: #FA787E;
-}
-.ng-valid.ng-dirty {
-	border-color: #78FA89;
+  display: none !important;
 }
 
-header .container{
+.ng-invalid.ng-dirty {
+  border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+  border-color: #78FA89;
+}
+
+header .container {
   background: url("../img/global-nav/manubar.png");
   height: 78px;
   width: 1150px;
 }
 
-
-
-footer{
-	height: 230px;
-	background-color: #4d6182;
-	width:100%;
+footer {
+  height: 230px;
+  background-color: #4d6182;
+  width: 100%;
 }
 
-footer #footer_container{
-	color :white;
-	font-size:14px;
+footer #footer_container {
+  color: white;
+  font-size: 14px;
 }
 
-footer #footer_container img{
-	padding-top: 30px;
-}
-footer #footer_container #footer_info{
-	margin-top: 20px;
-}
-footer #footer_container #footer_info p{
- 	font-size: 16px;
-	margin-bottom: 3px;
+footer #footer_container img {
+  padding-top: 30px;
 }
 
-footer #footer_container #copyright{
-	float:right;
-	font-size:12px;
+footer #footer_container #footer_info {
+  margin-top: 20px;
 }
 
-footer #footer_container span{
-	color :#ff6c11;
+footer #footer_container #footer_info p {
+  font-size: 16px;
+  margin-bottom: 3px;
 }
 
+footer #footer_container #copyright {
+  float: right;
+  font-size: 12px;
+}
 
-@media screen and (max-width:480px){ 
+footer #footer_container span {
+  color: #ff6c11;
+}
 
-  .navbar-toggle{
-  display: block!important;
-   border:1px solid #333333;
-   position:absolute;
-   right:3%;
- }
+@media screen and (max-width:480px) {
  
- .navbar-brand{
-   display:none!important;
- }
- 
- .navbar-inverse{
-   min-width:0px;
-   display:block!important;
- }
-   
-   header .container {
-   
-   }
- 
+
+  .navbar-toggle {
+    display: block!important;
+    border: 1px solid #333333;
+    position: absolute;
+    right: 3%;
+  }
+
+  .navbar-brand {
+    display: none!important;
+  }
+
+  .navbar-inverse {
+    min-width: 0px;
+    display: block!important;
+  }
+
+  header .container {
+  }
 }
