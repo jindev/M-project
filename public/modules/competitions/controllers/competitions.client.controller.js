@@ -122,11 +122,14 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			$http.get('/like/' + $scope.userId).
 				success(function(data, status, headers, config) {
 					if(data){
-						if(data[0].fbLike == 1){
-							$scope.fbLikeBtnFlag = true;
-						}
-						if(data[0].twiLike == 1){
-							$scope.twiLikeBtnFlag = true;
+
+						if(data[0].fbLike && data[0].twiLike){
+							if(data[0].fbLike == 1){
+								$scope.fbLikeBtnFlag = true;
+							}
+							if(data[0].twiLike == 1){
+								$scope.twiLikeBtnFlag = true;
+							}
 						}
 						if(data[0].uniLike == 1){
 							$scope.uniLikeBtnFlag = true;
@@ -151,7 +154,8 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			});
 
 			$scope.comments = Comments.query({
-				competitionId: $stateParams.competitionId
+				competitionId: $stateParams.competitionId,
+
 			},function(comments){
 
 				$scope.totalItems = comments.length;
@@ -160,7 +164,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 					$scope.comments = Comments.query({
 						competitionId: $stateParams.competitionId,
-						nPerPage : 12,
+						nPerPage : 5,
 						pageNumber : $scope.currentPage
 					});
 
