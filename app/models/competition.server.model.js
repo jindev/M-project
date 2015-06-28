@@ -43,21 +43,21 @@ var CompetitionSchema = new Schema({
 	phoneNum : {
 		type: String,
 		default: '',
-		required: '핸드폰 번호를 적어주세요',
+		required: '연락처를 적어주세요',
 		trim: true
 	},
-	address : {
-		type: String,
-		default: '',
-		required: '주소를 적어주세요',
-		trim: true
-	},
-	country : {
-		type: String,
-		default: '',
-		required: '국가를 적어주세요',
-		trim: true
-	},
+	//address : {
+	//	type: String,
+	//	default: '',
+	//	required: '주소를 적어주세요',
+	//	trim: true
+	//},
+	//country : {
+	//	type: String,
+	//	default: '',
+	//	required: '국가를 적어주세요',
+	//	trim: true
+	//},
 	teamImgName : {
 		type: String,
 		default: '',

@@ -36,6 +36,11 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 		$scope.create = function() {
 			// Create new Competition object
 
+			if(!$scope.agreePolicy){
+				alert("이용약관에 동의해 주세요");
+			}
+
+
 			var competition = new Competitions ({
 				name: this.name,
 				description : this.description,
@@ -43,8 +48,8 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 				songDesc : this.songDesc,
 				lyric : this.lyric,
 				phoneNum : this.phoneNum,
-				address : this.address,
-				country : this.country,
+				//address : this.address,
+				//country : this.country,
 				teamUrl : this.teamUrl,
 				teamImgName : $scope.authentication.user.username
 			});
@@ -308,6 +313,10 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 		}
 
 		$scope.uploadFile = function(files) {
+			if(files.length == 0){
+				return;
+			}
+
 			var fd = new FormData();
 			//Take the first selected file
 			fd.append("file", files[0]);

@@ -1,10 +1,7 @@
-<section data-ng-controller="CompetitionsController" ng-init="checkAlreadyRegi()">
-
-
+<section data-ng-controller="CompetitionsController" ng-init="checkAlreadyRegi()" xmlns="http://www.w3.org/1999/html">
   <div class="signup_container">
     <div class="container-fluid intro_container">
       <div class="signup-list-header">
-        
         <div class="title-text"></div>
         <div class="dummy01"></div>
         <div class="dummy02"></div>
@@ -14,114 +11,103 @@
         <h2>
           <img src="/modules/competitions/img/apply_tac.png" alt="회원가입">
         </h2>
-        
         <div class="signup_form">
-          
           <div class="notice-description">
             #아래 사항들을 빠짐없이 기입해주세요!
           </div>
           <div class="row">
-            <div class="col-md-6">
-              
+            <div class="col-md-12">
               <form class="form-horizontal" enctype="multipart/form-data" data-ng-submit="create()" novalidate>
-                <div class="form-group">
-                  <input type="submit" class="btn btn-default">
-                </div>
-                <fieldset>
+
+                <div class="col-md-6">
                   <div class="form-group">
                     <label class="control-label" for="name"></label>
                     <div class="controls">
-                      <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="이름" required>
+                      <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="참가자명 (팀명)" required>
                     </div>
                   </div>
                 
                   <div class="form-group">
                     <label class="control-label" for="description"></label>
                     <div class="controls">
-                      <input type="text" data-ng-model="description" id="description" class="form-control" placeholder="생년월일" required>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label" for="songTitle"></label>
-                    <div class="controls">
-                      <input type="text" data-ng-model="songTitle" id="songTitle" class="form-control" placeholder="노래 제목" required>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label" for="songDesc"></label>
-                    <div class="controls">
-                      <input type="text" data-ng-model="songDesc" id="songDesc" class="form-control" placeholder="장르 및 곡의 내용을 적어주세요 " required>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label" for="lyric"></label>
-                    <div class="controls">
-                      <input type="textarea" data-ng-model="lyric" id="lyric" class="form-control" placeholder="가사 전체를 적어주세요 " required>
+                      <input type="text" data-ng-model="description" id="description" class="form-control" placeholder="참가자 소개 (멤버 구성, 멤버 생년월일, 포지션, 팀일 경우 결성 시기 등)" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label" for="phoneNum"></label>
                     <div class="controls">
-                      <input type="text" data-ng-model="phoneNum" id="phoneNum" class="form-control" placeholder="휴대폰" required>
+                      <input type="text" data-ng-model="phoneNum" id="phoneNum" class="form-control" placeholder="연락처" required>
                     </div>
                   </div>
-                
-              
                   <div class="form-group">
                     <label class="control-label" for="teamUrl"></label>
                     <div class="controls">
                       <input type="url" data-ng-model="teamUrl" id="teamUrl" class="form-control" placeholder="동영상등록" required>
                     </div>
                   </div>
+                </div>
+                  <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label" for="songTitle"></label>
+                    <div class="controls">
+                      <input type="text" data-ng-model="songTitle" id="songTitle" class="form-control" placeholder="참가곡 제목" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="songDesc"></label>
+                    <div class="controls">
+                      <input type="text" data-ng-model="songDesc" id="songDesc" class="form-control" placeholder="참가곡 소개(장르, 곡 내용 등) " required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="lyric"></label>
+                    <div class="controls">
+                      <input type="textarea" data-ng-model="lyric" id="lyric" class="form-control" placeholder="참가곡 가사" required>
+                    </div>
+                  </div>
 
-                  <youtube-video video-url="teamUrl"></youtube-video>
+
+                    <label class="control-label">참가자 사진 등록 </label>
+                    <input ng-model="teamImgInput" type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+
+
+                    <!--<youtube-video video-url="teamUrl"></youtube-video>-->
+
+                  </div>
 
                             
-                  <div data-ng-show="error" class="text-danger">
-                    <strong data-ng-bind="error"></strong>
-                  </div>
-                  
+
+                  <div class="col-md-12" style="text-align: center">
+                    <div data-ng-show="error" class="text-danger">
+                      <strong data-ng-bind="error"></strong>
+                    </div>
                   <div class="agree-description">
                     본인은 유니뮤직 레이스 참가 신청에 관련하여 성명, 생년월일 등 본인의 개인정보를 수집 및 활용하는 것에 동의합니다.
                   </div>
               
-                  <form>
+
                     <ul class="list-unstyled">
-                    <li class="agree-radio">
-                      <input type="radio" name="agree" value="agree" checked>동의합니다.
-                    </li>
-                    <li class="agree-radio">
-                      <input type="radio" name="agree" value="disagree">동의하지 않습니다.
-                    </li>
-                  </ul>
-                  </form>
-                  
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="control-label" for="country"></label>
-                    <div class="controls">
-                      <input type="text" data-ng-model="country" id="country" class="form-control" placeholder="출신국가" required>
-                    </div>
+                      <li class="agree-radio">
+                        <input type="radio" name="agree" value="agree" checked ng-model="agreePolicy">동의합니다.
+                      </li>
+                      <li class="agree-radio">
+                        <input type="radio" name="agree" value="disagree" ng-model="agreePolicy">동의하지 않습니다.
+                      </li>
+                    </ul>
+
                   </div>
-                
-                  <div class="form-group">
-                    <label class="control-label" for="address"></label>
-                    <div class="controls">
-                      <input type="text" data-ng-model="address" id="address" class="form-control" placeholder="주소" required>
-                    </div>
-                  </div>        
-                  <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                <div class="form-group col-md-12"  style="text-align: center">
+                  <button type="submit" class="btn btn-default" style="border:0;   outline: 0; background: none;">
+                    <img src="/modules/competitions/img/apply_btn.png" alt="신청하기">
+                   </button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
-  </fieldset>
-</form>
-            
+  </div>
 </section>
 
 
