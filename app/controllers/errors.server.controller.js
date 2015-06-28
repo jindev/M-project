@@ -8,7 +8,8 @@ var getUniqueErrorMessage = function(err) {
 
 	try {
 		var fieldName = err.err.substring(err.err.lastIndexOf('.$') + 2, err.err.lastIndexOf('_1'));
-		output = fieldName.charAt(0).toUpperCase() + fieldName.slice(1) + ' already exists';
+		//output = fieldName.charAt(0).toUpperCase() + fieldName.slice(1) + ' already exists';
+		output = '이미 등록된 이메일 입니다.';
 
 	} catch (ex) {
 		output = 'Unique field already exists';
