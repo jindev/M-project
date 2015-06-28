@@ -23,4 +23,6 @@ module.exports = function(app) {
 		.get(users.requiresLogin,competitions.checkAlreadyRegi);
 	app.route('/checkUserApply')
 		.get(users.requiresLogin,competitions.checkUserApply);
+	app.route('/isAlreadyApply')
+		.get(users.requiresLogin,competitions.isAlreadyApply);
 };

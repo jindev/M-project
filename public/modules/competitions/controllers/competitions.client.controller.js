@@ -53,13 +53,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			competition.$save(function(response) {
 				$location.path('competitions/' + response._id);
 
-				// Clear form fields
-				$scope.name = '';
-				$scope.description = '';
-				$scope.phoneNum = '';
-				$scope.address = '';
-				$scope.country = '';
-				$scope.teamUrl = '';
+
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
@@ -196,7 +190,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			$http.get('/checkAlreadyRegi', {
 
 			}).success(function(data){
-				if(data.length > 1){
+				if(data.length > 0){
 					alert("이미 참가 신청 하셨습니다.");
 					$window.history.back();
 				}

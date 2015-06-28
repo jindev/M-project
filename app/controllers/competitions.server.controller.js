@@ -189,3 +189,14 @@ exports.checkUserApply = function(req, res){
 
 	});
 }
+exports.isAlreadyApply = function(req, res){
+
+	Competition.find({user: req.user._id}).exec(function (err, competition) {
+		if (err){
+
+		}
+		res.send(competition);
+
+
+	});
+}
