@@ -239,4 +239,23 @@ footer #footer_container span {
   header .container {
     background-image: none;
   }
+
+  #title_container {
+    height: 376px;
+  }
+
+  #competition_con{
+    display: none;
+  }
+
+  #organization{
+    position: relative;
+    top: 340px;
+
+    margin: 0px;
+  }
+
+  #organization > img{
+    width: 90%;
+  }
 }
