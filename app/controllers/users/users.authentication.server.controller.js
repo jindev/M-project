@@ -70,13 +70,13 @@ exports.signin = function(req, res, next) {
 	})(req, res, next);
 };
 
-function checkAlreadyApply(id){
-	Competition.find({user: id },function(err,competition){
-		if(competition){
-			user.alreadyApply = true;
-		}
-	});
-}
+//function checkAlreadyApply(id){
+//	Competition.find({user: id },function(err,competition){
+//		if(competition){
+//			user.alreadyApply = true;
+//		}
+//	});
+//}
 
 /**
  * Signout

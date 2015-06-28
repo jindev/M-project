@@ -20,6 +20,9 @@ angular.module('competitions').config(['$stateProvider',
 		state('editCompetition', {
 			url: '/competitions/:competitionId/edit',
 			templateUrl: 'modules/competitions/views/edit-competition.client.view.html'
+		}).state('applyInfo', {
+				url: '/applyInfo',
+				templateUrl: 'modules/competitions/views/list-introduces.client.view2.html'
 		});
 	}
 ]);

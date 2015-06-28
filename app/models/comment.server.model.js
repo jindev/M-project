@@ -25,6 +25,12 @@ var CommentSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'User'
 	},
+	nickname:{
+		type: String,
+		default: '',
+		trim: true
+	},
+
 	competitionId : {
 		type: Schema.ObjectId
 	}

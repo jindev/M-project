@@ -15,6 +15,7 @@ exports.create = function(req, res) {
 
     var comment = new Comment(req.body);
     comment.user = req.user;
+    comment.nickname = req.user.username;
 
     comment.save(function(err) {
         if (err) {
@@ -100,8 +101,12 @@ exports.delete = function(req, res) {
  * List of Competitions
  */
 exports.list = function(req, res) {
+
+    var pageNumber = req.query.pageNumber;
+    var nPerPage = req.query.nPerPage;
+
     var competitionId = req.query.competitionId;
-    Comment.find({"competitionId" : competitionId}).sort('-created').populate('user', 'displayName').exec(function(err, comments) {
+    Comment.find({"competitionId" : competitionId}).sort('-created').skip(pageNumber > 0 ? ((pageNumber-1)*nPerPage) : 0).limit(nPerPage).exec(function(err, comments) {
         if (err) {
             return res.status(400).send({
                 message: errorHandler.getErrorMessage(err)

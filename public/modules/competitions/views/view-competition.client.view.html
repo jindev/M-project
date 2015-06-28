@@ -53,7 +53,7 @@
         </form>
 
         <ul class="list-unstyled">
-          <li class="comment_content" data-ng-repeat="comment in comments">{{comment.commentContent}}<span ng-model="{{authentication.user.nickname}}"></span></li>
+          <li class="comment_content" data-ng-repeat="comment in comments | limitTo:5">{{comment.commentContent}}<span style="float:right;">{{comment.nickname}}</span></li>
         </ul>
 
       </div>

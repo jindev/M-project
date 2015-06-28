@@ -7,7 +7,7 @@ angular.module('introduces').run(['Menus',
 		Menus.addMenuItem('topbar', 'UNI MUSIC RACE?', 'introduces', '/introduces(/create)?');
 		Menus.addMenuItem('topbar', '경연대회', 'competitions', 'dropdown', '/competitions(/create)?');
 		Menus.addSubMenuItem('topbar', 'competitions', '참가자 리스트', 'competitions');
-		Menus.addSubMenuItem('topbar', 'competitions', '참가 등록', 'competitions/create');
+		Menus.addSubMenuItem('topbar', 'competitions', '참가 등록','applyInfo');
 		Menus.addMenuItem('topbar', 'FAQ', 'faqs',  'faqs');
 
 		// Menus.addSubMenuItem('topbar', '진행일정', '진행일정', 'introduces');

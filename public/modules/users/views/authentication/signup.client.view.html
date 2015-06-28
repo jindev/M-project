@@ -16,7 +16,7 @@
         <div class="signup_form">
           <div class="row">
             <div class="col-md-6">
-              <form name="userForm" class="signin form-horizontal" novalidate autocomplete="off">
+              <form  name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
                 <fieldset>
                   <div class="form-group">
                     <input type="email" id="email" name="email" class="form-control signin_button_size" data-ng-model="credentials.email" placeholder="이메일">
@@ -31,9 +31,7 @@
                     <input type="password" id="password-confirm" name="password-confirm" class="form-control signin_button_size" data-ng-model="confirmPassword" placeholder="패스워드 확인">
                   </div>
                   <div class="form-group">
-                    <a class="undecorated-link"  data-ng-click="signup()" style=" cursor: pointer;">
-                      <img src="/modules/users/img/signin_button.png">
-                    </a>
+                    <button type="submit" class="btn btn-primary">Sign in</button>&nbsp; or&nbsp;
                   </div>
                   <div data-ng-show="error" class="text-center text-danger">
                     <strong data-ng-bind="error"></strong>

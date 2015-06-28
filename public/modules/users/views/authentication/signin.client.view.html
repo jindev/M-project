@@ -18,15 +18,15 @@
               <form name="userForm" data-ng-submit="signin()" class="signin form-horizontal" novalidate autocomplete="off">
                 <fieldset>
                   <div class="form-group">
-                    <input type="email" id="email" name="email" class="form-control signin_button_size" data-ng-model="credentials.email" placeholder="이메일">
+                    <input type="text" id="username" name="username" class="form-control signin_button_size" data-ng-model="credentials.username" placeholder="Username">
                   </div>
                   <div class="form-group">
                     <input type="password" id="password" name="password" class="form-control signin_button_size" data-ng-model="credentials.password" placeholder="패스워드">
                   </div>
                   <div class="form-group">
-                    <a href="/auth/signin" class="undecorated-link">
+                    <button type="submit" class="undecorated-link signin_btn" >
                       <img class="login_button_size" src="/modules/users/img/login_button.png">
-                    </a>
+                    </button>
                   </div>
                   <div data-ng-show="error" class="text-center text-danger">
                     <strong data-ng-bind="error"></strong>

@@ -101,11 +101,6 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 
 				$scope.totalItems = data.length;
 
-				$scope.setPage = function (pageNo) {
-					console.log(pageNo);
-					$scope.currentPage = pageNo;
-				};
-
 				$scope.pageChanged = function() {
 
 					$scope.competitions = Competitions.query({
@@ -160,11 +155,14 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			},function(comments){
 
 				$scope.totalItems = comments.length;
-				$scope.setPage = function (pageNo) {
-					$scope.currentPage = pageNo;
-				};
 
 				$scope.pageChanged = function() {
+
+					$scope.comments = Comments.query({
+						competitionId: $stateParams.competitionId,
+						nPerPage : 12,
+						pageNumber : $scope.currentPage
+					});
 
 				};
 

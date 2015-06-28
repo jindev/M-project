@@ -6,7 +6,8 @@
 }
 #intro_section .intro_container{
     padding: 0;
-    background: url('/modules/introduces/img/bg_01.jpg') no-repeat 0 0;
+    background: url('/modules/introduces/img/main_bg.jpg') no-repeat 0 0;
+    background-size: 100%;
 }
 .introduces-list-header{
     height: 1163px;

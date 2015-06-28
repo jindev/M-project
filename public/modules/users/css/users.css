@@ -116,6 +116,14 @@
 }
 
 .login_button_size, .signin_button_size{
-  width: 85%;
+  width: 100%;
   height: auto;
 }
+
+.signin_btn{
+    width:100%;
+    background: none;
+    outline: 0;
+    border: 0;
+}
+
