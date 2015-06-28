@@ -216,6 +216,7 @@ footer #footer_container span {
     border: 1px solid #333333;
     position: absolute;
     right: 3%;
+    background-color: #333333;
   }
 
   .navbar-brand {
@@ -227,6 +228,15 @@ footer #footer_container span {
     display: block!important;
   }
 
+  .navbar-collapse {
+    background-color: #ffffff;
+  }
+
+    .navbar-collapse {
+    background-color: #ffffff;
+  }
+
   header .container {
+    background-image: none;
   }
 }
