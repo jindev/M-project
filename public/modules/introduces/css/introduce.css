@@ -1,347 +1,418 @@
-#intro_section{
-    background:url('/modules/introduces/img/bg.jpg') no-repeat 0 0;
+#intro_section {
+  background:url(/modules/introduces/img/bg.jpg) no-repeat 0 0;
+  background-size:contain
 }
-#intro_section h2{
-    margin: 0;
+
+#intro_section h2 {
+  margin:0
 }
-#intro_section .intro_container{
-    padding: 0;
-    background: url('/modules/introduces/img/main_bg.jpg') no-repeat 0 0;
-    background-size: 100%;
+
+#intro_section .intro_container {
+  padding:0;
+  background:url(/modules/introduces/img/main_bg.jpg) no-repeat 0 0;
+  background-size:100%
 }
-.introduces-list-header{
-    height: 1163px;
+
+.introduces-list-header {
+  height:1163px
 }
-.introduces-list-header .buttons{
-    padding-top: 849px;
-    text-align: center;
+
+.introduces-list-header .buttons {
+  padding-top:849px;
+  text-align:center
 }
-.introduces-list-header .buttons li{
-    display: inline-block;
-    padding: 0 2px;
+
+.introduces-list-header .buttons li {
+  display:inline-block;
+  padding:0 2px
 }
-.introduces-list-header .buttons a{
-    display: inline-block;
-    width: 285px;
-    height: 107px;
-    line-height: 107px;
+
+.introduces-list-header .buttons a {
+  display:inline-block;
+  width:285px;
+  height:107px;
+  line-height:107px
 }
-.introduces-list-header .buttons .btn01 a{
-    background: url('/modules/introduces/img/registration_btn.png');
+
+.introduces-list-header .buttons .btn01 a {
+  background:url(/modules/introduces/img/registration_btn.png)
 }
-.introduces-list-header .buttons .btn02 a{
-    background: url('/modules/introduces/img/list_btn.png');
+
+.introduces-list-header .buttons .btn02 a {
+  background:url(/modules/introduces/img/list_btn.png)
 }
-.introduces-list-header .organization{
-    margin: 30px auto 0;
-    position: relative;
-    height: 75px;
-    max-width: 970px;
+
+.introduces-list-header .organization {
+  margin:30px auto 0;
+  position:relative;
+  height:75px;
+  max-width:970px
 }
-.introduces-list-header .organization .organization-left{
-    top: 0;
-    left: 0;
-    width: 37px;
-    height: 75px;
-    position: absolute;
-    background: url('/modules/introduces/img/organization_bar_bg01.png') no-repeat 0 0;
+
+.introduces-list-header .organization .organization-left {
+  top:0;
+  left:0;
+  width:37px;
+  height:75px;
+  position:absolute;
+  background:url(/modules/introduces/img/organization_bar_bg01.png) no-repeat 0 0
 }
-.introduces-list-header .organization .organization-right{
-    top: 0;
-    right: 0;
-    width: 37px;
-    height: 75px;
-    position: absolute;
-    background: url('/modules/introduces/img/organization_bar_bg03.png') no-repeat 0 0;
+
+.introduces-list-header .organization .organization-right {
+  top:0;
+  right:0;
+  width:37px;
+  height:75px;
+  position:absolute;
+  background:url(/modules/introduces/img/organization_bar_bg03.png) no-repeat 0 0
 }
-.introduces-list-header .organization .organization-list{
-    margin: 0 37px;
-    height: 75px;
-    background: url('/modules/introduces/img/organization_bar_bg02.png') 0 0 repeat-x;
+
+.introduces-list-header .organization .organization-list {
+  margin:0 37px;
+  height:75px;
+  background:url(/modules/introduces/img/organization_bar_bg02.png) 0 0 repeat-x
 }
-.introduces-list-header .organization .organization-list .list{
-    margin: 0 auto;
-    width: 755px;
-    height: 75px;
-    background: url('/modules/introduces/img/organization.png') 0 50% no-repeat;
+
+.introduces-list-header .organization .organization-list .list {
+  margin:0 auto;
+  width:755px;
+  height:75px;
+  background:url(/modules/introduces/img/organization.png) 0 50% no-repeat
 }
-.join-introduce-description{
-    padding: 60px 90px 0;
-    background: #4d6182 url('/modules/introduces/img/logo_sub01.png') 90px 177px no-repeat;
+
+.join-introduce-description {
+  padding:60px 90px 0;
+  background:#4d6182 url(/modules/introduces/img/logo_sub01.png) 90px 177px no-repeat
 }
-.join-introduce-description h2{
-    width: 137px;
-    height: 43px;
-    background: url('/modules/introduces/img/introduce_tac.png') 0 0 no-repeat;
+
+.join-introduce-description h2 {
+  width:137px;
+  height:43px;
+  background:url(/modules/introduces/img/introduce_tac.png) 0 0 no-repeat
 }
-.join-introduce-description .context{
-    padding-left: 313px;
-    padding-bottom: 65px;
+
+.join-introduce-description .context {
+  padding-left:313px;
+  padding-bottom:65px
 }
-.join-introduce-description .context p{
-    font-size: 18px;
-    color: white;
-    line-height: 1.3;
-    margin: 20px 0;
+
+.join-introduce-description .context p {
+  font-size:18px;
+  color:#fff;
+  line-height:1.3;
+  margin:20px 0
 }
-.join-introduce-handbook{
-    padding: 60px 90px 0;
-    background-color: white;
+
+.join-introduce-handbook {
+  padding:60px 90px 0;
+  background-color:#fff
 }
-.join-introduce-handbook h2{
-    width: 137px;
-    height: 43px;
-    background: url('/modules/introduces/img/handbook_tac.png') 0 0 no-repeat;
+
+.join-introduce-handbook h2 {
+  width:137px;
+  height:43px;
+  background:url(/modules/introduces/img/handbook_tac.png) 0 0 no-repeat
 }
-.join-introduce-handbook .contexts{
-    padding-top: 30px;
+
+.join-introduce-handbook .contexts {
+  padding-top:30px
 }
+
 .join-introduce-handbook .contexts .context {
-    padding-left: 50px;
-    padding-bottom: 60px;
-    position: relative;
-    background: url('/modules/introduces/img/bul-intro.png') 0 3px no-repeat;
-}
-.join-introduce-handbook .contexts .context > .dummy{
-    top: 0;
-    left: 0;
-    width: 24px;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    background: url('/modules/introduces/img/bul-intro-bg.png') 0 0 repeat-y;
-}
-.join-introduce-handbook .contexts .context:first-child .dummy{
-    top: 20px;
-    bottom: 0;
-}
-.join-introduce-handbook .contexts .context:last-child .dummy{
-    height: 10px;
-    bottom: auto;
-}
-.join-introduce-handbook .context h3{
-    margin: 0 0 15px;
-    font-size: 24px;
-    color: #ff6c11;
-}
-.join-introduce-handbook .context h3 em{
-    font-style: normal;
-    font-size: 18px;
-    color: #4d6182;
-}
-.join-introduce-handbook .context p{
-    margin: 0;
-    font-size: 18px;
-    color: #4d6182;
-    line-height: 1.3;
-}
-.join-introduce-handbook ul{
-    margin: 0;
-    padding: 10px 0 0;
-    list-style-type: none;
-}
-.join-introduce-handbook li{
-    padding: 0 20px;
-}
-.join-introduce-handbook li .block{
-    background: url('/modules/introduces/img/means_arrow.png') no-repeat 100% 40px;
-}
-.join-introduce-handbook li:last-child .block{
-    background: none;
-}
-.join-introduce-handbook li .block .dummy{
-    height: 140px;
-}
-.join-introduce-handbook .reg01 .block .dummy{
-    background: url('/modules/introduces/img/means_A.png') no-repeat 0 50%;
-}
-.join-introduce-handbook .reg02 .block .dummy{
-    background: url('/modules/introduces/img/means_B.png') no-repeat 0 50%;
-}
-.join-introduce-handbook .reg03 .block .dummy{
-    background: url('/modules/introduces/img/means_C.png') no-repeat 0 50%;
-}
-.join-introduce-handbook .reg04 .block .dummy{
-    background: url('/modules/introduces/img/means_D.png') no-repeat 0 50%;
-}
-.join-introduce-award{
-    padding: 60px 90px 70px;
-    position: relative;
-    background-color: #22d2a7;
-}
-.join-introduce-award h2{
-    margin-bottom: 30px !important;
-    width: 137px;
-    height: 43px;
-    background: url('/modules/introduces/img/award_tac.png') 0 0 no-repeat;
-}
-.join-introduce-award ul{
-    margin: 0 0 0 -20px;
-    padding: 10px 29px 0 0;
-    list-style-type: none;
-}
-.join-introduce-award li{
-    padding: 0 20px;
-}
-.join-introduce-award li .award-desc{
-    height: 355px;
-    background: url('/modules/introduces/img/bg-award.png') 0 0 no-repeat;
-}
-.join-introduce-award .dummy{
-    height: 159px;
-    background: 50% 50% no-repeat;
-}
-.join-introduce-award .award01 .dummy{
-    background-image: url('/modules/introduces/img/award_01_icon.png');
-}
-.join-introduce-award .award02 .dummy{
-    background-image: url('/modules/introduces/img/award_02_icon.png');
-}
-.join-introduce-award .award03 .dummy{
-    background-image: url('/modules/introduces/img/award_03_icon.png');
-}
-.join-introduce-award h3{
-    margin: 0 0 23px;
-    color: #004a98;
-    font-size: 24px;
-}
-.join-introduce-award .context{
-    padding: 30px 35px;
-}
-.join-introduce-award p{
-    color: #004a98;
-    font-size: 18px;
-    line-height: 1.2;
-}
-.join-introduce-award p strong{
-    color: #ff6c11;
-}
-.join-introduce-award p strong b{
-    font-size: 24px;
-}
-.join-introduce-award > .dummy{
-    right: 90px;
-    bottom: 25px;
-    width: 125px;
-    height: 155px;
-    position: absolute;
-    background: url('/modules/introduces/img/img-join-introduce-award-speasman.png') 0 0 no-repeat;
-}
-.join-introduce-location{
-    padding: 60px 90px 70px;
-    position: relative;
-    background-color: white;
-}
-.join-introduce-location h2{
-    margin-bottom: 30px !important;
-    width: 137px;
-    height: 43px;
-    background: url('/modules/introduces/img/location_tac.png') 0 0 no-repeat;
-}
-.join-introduce-location p{
-    margin: 25px 0;
-    font-size: 18px;
-    color: #4d6182;
-    line-height: 1.2;
-}
-.join-introduce-location p b{
-    color: #ff6c11;
+  padding-left:50px;
+  padding-bottom:60px;
+  position:relative;
+  background:url(/modules/introduces/img/bul-intro.png) 0 3px no-repeat
 }
 
-#join_info{
-    margin-bottom: 25px;
-    width:100%;
-    background-color:white;
-    border: 6px solid #4d6182;
-    border-radius: 6px;
-}
-#join_guide{
-    margin-bottom: 25px;
-    width:100%;
-    height:500px;
-    background-color:white;
-    border: 6px solid #4d6182;
-    border-radius: 6px;
-}
-#join_guide h2 em{
-    font-style: normal;
-    font-size: 18px;
-    color: #4d6081;
-    display: inline-block;
-    line-height: 40px;
-}
-#join_guide ul{
-    margin: 0;
-    padding: 10px 0 0;
-    list-style-type: none;
-}
-#join_guide li{
-    padding: 0 20px;
-}
-#join_guide li .block{
-    background: url('/modules/introduces/img/means_arrow.png') no-repeat 100% 40px;
-}
-#join_guide li:last-child .block{
-    background: none;
-}
-#join_guide li .block .dummy{
-    height: 140px;
-}
-#join_guide .reg01 .block .dummy{
-    background: url('/modules/introduces/img/means_A.png') no-repeat 0 50%;
-}
-#join_guide .reg02 .block .dummy{
-    background: url('/modules/introduces/img/means_B.png') no-repeat 0 50%;
-}
-#join_guide .reg03 .block .dummy{
-    background: url('/modules/introduces/img/means_C.png') no-repeat 0 50%;
-}
-#join_guide .reg04 .block .dummy{
-    background: url('/modules/introduces/img/means_D.png') no-repeat 0 50%;
-}
-#join_guide h3,
-#join_guide p{
-    margin: 15px 0;
-    line-height: 1.5;
-}
-#join_guide h3{
-    font-size: 24px;
-    color: #ff6d0a;
-}
-#join_guide p{
-    font-size: 18px;
-    color: #4d6081;
-}
-#join_guide p b{
-    color: #ff6d0a;
+.join-introduce-handbook .contexts .context > .dummy {
+  top:0;
+  left:0;
+  width:24px;
+  top:0;
+  bottom:0;
+  position:absolute;
+  background:url(/modules/introduces/img/bul-intro-bg.png) 0 0 repeat-y
 }
 
-
-#join_info img{
-    padding-top:20px;
-}
-#join_info p{
-    margin: 0;
-    padding: 20px 25px;
-    font-size:24px;
-    color:#4d6182;
-    line-height: 1.7;
-}
-.common-button{
-    padding: 85px 0;
-    text-align: center;
-}
-.common-button a{
-    display: inline-block;
-    width: 285px;
-    height: 107px;
-    line-height: 107px;
-    background: url('/modules/introduces/img/registration_btn.png') no-repeat 0 0;
+.join-introduce-handbook .contexts .context:first-child .dummy {
+  top:20px;
+  bottom:0
 }
 
+.join-introduce-handbook .contexts .context:last-child .dummy {
+  height:10px;
+  bottom:auto
+}
 
-.join-introduce-location div{
-  background-size: 100%;
-  margin-bottom: 30px !important;
-  width: 100%;
+.join-introduce-handbook .context h3 {
+  margin:0 0 15px;
+  font-size:24px;
+  color:#ff6c11
+}
+
+.join-introduce-handbook .context h3 em {
+  font-style:normal;
+  font-size:18px;
+  color:#4d6182
+}
+
+.join-introduce-handbook .context p {
+  margin:0;
+  font-size:18px;
+  color:#4d6182;
+  line-height:1.3
+}
+
+.join-introduce-handbook ul {
+  margin:0;
+  padding:10px 0 0;
+  list-style-type:none
+}
+
+.join-introduce-handbook li {
+  padding:0 20px
+}
+
+.join-introduce-handbook li .block {
+  background:url(/modules/introduces/img/means_arrow.png) no-repeat 100% 40px
+}
+
+.join-introduce-handbook li:last-child .block {
+  background:none
+}
+
+.join-introduce-handbook li .block .dummy {
+  height:140px
+}
+
+.join-introduce-handbook .reg01 .block .dummy {
+  background:url(/modules/introduces/img/means_A.png) no-repeat 0 50%
+}
+
+.join-introduce-handbook .reg02 .block .dummy {
+  background:url(/modules/introduces/img/means_B.png) no-repeat 0 50%
+}
+
+.join-introduce-handbook .reg03 .block .dummy {
+  background:url(/modules/introduces/img/means_C.png) no-repeat 0 50%
+}
+
+.join-introduce-handbook .reg04 .block .dummy {
+  background:url(/modules/introduces/img/means_D.png) no-repeat 0 50%
+}
+
+.join-introduce-award {
+  padding:60px 90px 70px;
+  position:relative;
+  background-color:#22d2a7
+}
+
+.join-introduce-award h2 {
+  margin-bottom:30px!important;
+  width:137px;
+  height:43px;
+  background:url(/modules/introduces/img/award_tac.png) 0 0 no-repeat
+}
+
+.join-introduce-award ul {
+  margin:0 0 0 -20px;
+  padding:10px 29px 0 0;
+  list-style-type:none
+}
+
+.join-introduce-award li {
+  padding:0 20px
+}
+
+.join-introduce-award li .award-desc {
+  height:355px;
+  background:url(/modules/introduces/img/bg-award.png) 0 0 no-repeat
+}
+
+.join-introduce-award .dummy {
+  height:159px;
+  background:50% 50% no-repeat
+}
+
+.join-introduce-award .award01 .dummy {
+  background-image:url(/modules/introduces/img/award_01_icon.png)
+}
+
+.join-introduce-award .award02 .dummy {
+  background-image:url(/modules/introduces/img/award_02_icon.png)
+}
+
+.join-introduce-award .award03 .dummy {
+  background-image:url(/modules/introduces/img/award_03_icon.png)
+}
+
+.join-introduce-award h3 {
+  margin:0 0 23px;
+  color:#004a98;
+  font-size:24px
+}
+
+.join-introduce-award .context {
+  padding:30px 35px
+}
+
+.join-introduce-award p {
+  color:#004a98;
+  font-size:18px;
+  line-height:1.2
+}
+
+.join-introduce-award p strong {
+  color:#ff6c11
+}
+
+.join-introduce-award p strong b {
+  font-size:24px
+}
+
+.join-introduce-award > .dummy {
+  right:90px;
+  bottom:25px;
+  width:125px;
+  height:155px;
+  position:absolute;
+  background:url(/modules/introduces/img/img-join-introduce-award-speasman.png) 0 0 no-repeat
+}
+
+.join-introduce-location {
+  padding:60px 90px 70px;
+  position:relative;
+  background-color:#fff
+}
+
+.join-introduce-location h2 {
+  margin-bottom:30px!important;
+  width:137px;
+  height:43px;
+  background:url(/modules/introduces/img/location_tac.png) 0 0 no-repeat
+}
+
+.join-introduce-location p {
+  margin:25px 0;
+  font-size:18px;
+  color:#4d6182;
+  line-height:1.2
+}
+
+.join-introduce-location p b {
+  color:#ff6c11
+}
+
+#join_info {
+  margin-bottom:25px;
+  width:100%;
+  background-color:#fff;
+  border:6px solid #4d6182;
+  border-radius:6px
+}
+
+#join_guide {
+  margin-bottom:25px;
+  width:100%;
+  height:500px;
+  background-color:#fff;
+  border:6px solid #4d6182;
+  border-radius:6px
+}
+
+#join_guide h2 em {
+  font-style:normal;
+  font-size:18px;
+  color:#4d6081;
+  display:inline-block;
+  line-height:40px
+}
+
+#join_guide ul {
+  margin:0;
+  padding:10px 0 0;
+  list-style-type:none
+}
+
+#join_guide li {
+  padding:0 20px
+}
+
+#join_guide li .block {
+  background:url(/modules/introduces/img/means_arrow.png) no-repeat 100% 40px
+}
+
+#join_guide li:last-child .block {
+  background:none
+}
+
+#join_guide li .block .dummy {
+  height:140px
+}
+
+#join_guide .reg01 .block .dummy {
+  background:url(/modules/introduces/img/means_A.png) no-repeat 0 50%
+}
+
+#join_guide .reg02 .block .dummy {
+  background:url(/modules/introduces/img/means_B.png) no-repeat 0 50%
+}
+
+#join_guide .reg03 .block .dummy {
+  background:url(/modules/introduces/img/means_C.png) no-repeat 0 50%
+}
+
+#join_guide .reg04 .block .dummy {
+  background:url(/modules/introduces/img/means_D.png) no-repeat 0 50%
+}
+
+#join_guide h3,#join_guide p {
+  margin:15px 0;
+  line-height:1.5
+}
+
+#join_guide h3 {
+  font-size:24px;
+  color:#ff6d0a
+}
+
+#join_guide p {
+  font-size:18px;
+  color:#4d6081
+}
+
+#join_guide p b {
+  color:#ff6d0a
+}
+
+#join_info img {
+  padding-top:20px
+}
+
+#join_info p {
+  margin:0;
+  padding:20px 25px;
+  font-size:24px;
+  color:#4d6182;
+  line-height:1.7
+}
+
+.common-button {
+  padding:85px 0;
+  text-align:center
+}
+
+.common-button a {
+  display:inline-block;
+  width:285px;
+  height:107px;
+  line-height:107px;
+  background:url(/modules/introduces/img/registration_btn.png) no-repeat 0 0
+}
+
+.join-introduce-location div {
+  background-size:100%;
+  margin-bottom:30px!important;
+  width:100%
 }
