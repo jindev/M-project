@@ -3,6 +3,8 @@
 		position: fixed;
 	}
 }
+
+
 .remove-account-container {
 	display: inline-block;
 	position: relative;
@@ -127,3 +129,15 @@
     border: 0;
 }
 
+input[type="text"], input[type="password"], input[type="email"]{
+  background-color : #496084;
+}
+
+.text-placeholder{color:blue;}
+
+input::-webkit-input-placeholder{
+    color:red;
+}
+input:-moz-placeholder {
+    color:red;
+}

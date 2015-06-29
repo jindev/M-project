@@ -15,13 +15,13 @@
         <div class="signin_form">
           <div class="row">
             <div class="col-md-6">
-              <form name="userForm" data-ng-submit="signin()" class="signin form-horizontal" novalidate autocomplete="off">
+              <form name="userForm" data-ng-submit="signin()" class="signin form-horizontal form-color" novalidate autocomplete="off">
                 <fieldset>
                   <div class="form-group">
-                    <input type="text" id="username" name="username" class="form-control signin_button_size" data-ng-model="credentials.username" placeholder="이메일">
+                    <input type="text" id="username" name="username" class="form-control signin_button_size" style="color: white;" data-ng-model="credentials.username" placeholder="이메일">
                   </div>
                   <div class="form-group">
-                    <input type="password" id="password" name="password" class="form-control signin_button_size" data-ng-model="credentials.password" placeholder="패스워드">
+                    <input type="password" id="password" name="password" class="form-control signin_button_size form-color" data-ng-model="credentials.password" placeholder="패스워드">
                   </div>
                   <div class="form-group">
                     <button type="submit" class="undecorated-link signin_btn" >
