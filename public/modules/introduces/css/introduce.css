@@ -416,3 +416,99 @@
   margin-bottom:30px!important;
   width:100%
 }
+
+@media screen and (max-width: 480px) {
+
+
+  #intro_section h2 {
+    margin-left: -5vw;
+  }
+  
+  .introduces-list-header {
+    height: 160vw;
+  }
+
+  .introduces-list-header .buttons {
+    padding-top: 100vw;
+    padding-left: 5vw;
+  }
+
+  .introduces-list-header .buttons li {
+  }
+
+  .introduces-list-header menu.buttons li > a {
+    width: 28vw;
+    height: 10vw;
+    line-height: 10vw;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .introduces-list-header .organization {
+    height: 10vw;
+  }
+
+  .introduces-list-header .organization .organization-left {
+    height: 10vw;
+  }
+
+  .join-introduce-description {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vw;
+    background-position: 6vw 35vw;
+  }
+
+  .join-introduce-description .context {
+    padding-left: 0vw;
+    padding-bottom: 5vw;
+    margin-top: 90vw;
+  }
+
+  .join-introduce-handbook {
+    padding: 10vw 5vw 5vw;
+  }
+
+  .join-introduce-award {
+    padding: 10vw 5vw;
+  }
+
+  #intro_section .join-introduce-award h2 {
+    margin-left: -5vw;
+  }
+
+  .join-introduce-award ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .join-introduce-award ul li {
+    margin: 2vw 0;
+    padding: 0;
+  }
+
+  .join-introduce-award li .award-desc {
+    background-size: 100% 100%;
+  }
+
+  .join-introduce-award > .dummy {
+      right: 1vw;
+      bottom: 5vw;
+      width: 25vw;
+      height: 28vw;
+      position: absolute;
+      background: url(/modules/introduces/img/img-join-introduce-award-speasman.png) 0 0/contain no-repeat;
+  }
+
+  .join-introduce-location {
+    padding: 10vw 5vw;
+  }
+
+  #intro_section .join-introduce-location h2 {
+    margin-left: -5vw;
+  }
+
+  #google-map-location {
+    width: 100%;
+  }
+}
