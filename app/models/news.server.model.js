@@ -19,7 +19,7 @@ var NewsSchema = new Schema({
 	content:{
 		type : String,
 		default : '',
-		required : 'Please fill News name',
+		required : 'Please fill News content',
 		trim: true
 	},
 	created: {

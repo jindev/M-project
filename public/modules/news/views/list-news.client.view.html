@@ -16,10 +16,10 @@
         </div>
 
         <div class="news_tac_list">
-            <a data-ng-repeat="news in news" data-ng-href="#!/news/{{news._id}}" class="list-group-item">
+            <div data-ng-repeat="news in news" data-ng-href="#!/news/{{news._id}}" class="list-group-item">
     			<h4 class="list-group-item-heading" data-ng-bind="news.name"></h4>
                 <p data-ng-bind="news.content"></p>
-            </a>
+            </div>
         </div>
     </div>
 </section>
