@@ -1,5 +1,5 @@
 <script>
-  alert("8월 1일부터는 작성하신 페이지가 수정이 되지 않습니다.");
+alert("8월 1일부터는 작성하신 페이지가 수정이 되지 않습니다.");
 </script>
 <section data-ng-controller="CompetitionsController" ng-init="checkAlreadyRegi()" xmlns="http://www.w3.org/1999/html">
   <div class="signup_container">
@@ -23,70 +23,92 @@
               <form class="form-horizontal" enctype="multipart/form-data" data-ng-submit="create()" novalidate>
 
                 <div class="col-md-6">
-                  <div class="form-group">
+                  <div class="form-group form-size">
                     <label class="control-label" for="name"></label>
                     <div class="controls">
                       <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="참가자명 (팀명)" required>
                     </div>
                   </div>
                 
-                  <div class="form-group">
+                  <div class="form-group form-size">
                     <label class="control-label" for="description"></label>
                     <div class="controls">
-                      <input type="text" data-ng-model="description" id="description" class="form-control" placeholder="참가자 소개 (멤버 구성, 멤버 생년월일, 포지션, 팀일 경우 결성 시기 등)" required>
+                      <!-- <input type="textarea" data-ng-model="description" id="description" class="form-control formSize" placeholder="참가자 소개 (멤버 구성, 멤버 생년월일, 포지션, 팀일 경우 결성 시기 등)" required> -->  
+                      <textarea data-ng-model="description" id="description" class="form-control formSize" placeholder="참가자 소개 (멤버 구성, 멤버 생년월일, 포지션, 팀일 경우 결성 시기 등)" required></textarea>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group form-size">
                     <label class="control-label" for="phoneNum"></label>
                     <div class="controls">
                       <input type="text" data-ng-model="phoneNum" id="phoneNum" class="form-control" placeholder="연락처" required>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group form-size">
                     <label class="control-label" for="teamUrl"></label>
                     <div class="controls">
                       <input type="url" data-ng-model="teamUrl" id="teamUrl" class="form-control" placeholder="동영상등록" required>
                     </div>
                   </div>
+                  <div data-ng-show="error" class="text-danger">
+                    <strong data-ng-bind="error"></strong>
+                  </div>
+                  <div class="agree-description">
+                    본인은 유니뮤직 레이스 참가 신청에 관련하여 성명, 생년월일 등 본인의 개인정보를 수집 및 활용하는 것에 동의합니다.
+                  </div>
+              
+
+                  <ul class="list-unstyled">
+                    <li class="agree-radio">
+                      <input type="radio" name="agree" value="agree" checked ng-model="agreePolicy">동의합니다.
+                    </li>
+                    <li class="agree-radio">
+                      <input type="radio" name="agree" value="disagree" ng-model="agreePolicy">동의하지 않습니다.
+                    </li>
+                  </ul>
+                  
+                  
+                  
                 </div>
-                  <div class="col-md-6">
-                  <div class="form-group">
+                <div class="col-md-6">
+                  <div class="form-group form-size">
                     <label class="control-label" for="songTitle"></label>
                     <div class="controls">
-                      <input type="text" data-ng-model="songTitle" id="songTitle" class="form-control" placeholder="참가곡 제목" required>
+                      <!-- <input type="textarea" data-ng-model="songTitle" id="songTitle" class="form-control formSize" placeholder="참가곡 제목" required> -->      <textarea data-ng-model="songTitle" id="songTitle" class="form-control formSize" placeholder="참가곡 제목" required></textarea>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group form-size">
                     <label class="control-label" for="songDesc"></label>
                     <div class="controls">
                       <input type="text" data-ng-model="songDesc" id="songDesc" class="form-control" placeholder="참가곡 소개(장르, 곡 내용 등) " required>
                     </div>
                   </div>
-                  <div class="form-group">
+                  
+                  <div class="form-group form-size">
                     <label class="control-label" for="lyric"></label>
                     <div class="controls">
-                      <input type="textarea" data-ng-model="lyric" id="lyric" class="form-control" placeholder="참가곡 가사" required>
+                      <input type="text" data-ng-model="lyric" id="lyric" class="form-control" placeholder="참가곡 가사" required>
                     </div>
                   </div>
 
+                  <!-- <input  type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/> -->
+                  <!--<youtube-video video-url="teamUrl"></youtube-video>-->
 
-                    <label class="control-label">참가자 사진 등록 </label>
-                    <input ng-model="teamImgInput" type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                  <div class="form-group form-size">
+
+                    <div class="controls">
+
+                      <input type="text" id="fileName" class="file_input_textbox" placeholder="사진" readonly="readonly">
 
 
-                    <!--<youtube-video video-url="teamUrl"></youtube-video>-->
-
-                  </div>
-
-                            
-
-                  <div class="col-md-12" style="text-align: center">
-                    <div data-ng-show="error" class="text-danger">
-                      <strong data-ng-bind="error"></strong>
+                      <div class="file_input_div">
+                        <input type="button" value="찾기" class="file_input_button" />
+                        <input type="file" class="file_input_hidden" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                      </div>
                     </div>
-                  <div class="agree-description">
-                    본인은 유니뮤직 레이스 참가 신청에 관련하여 성명, 생년월일 등 본인의 개인정보를 수집 및 활용하는 것에 동의합니다.
+
+
                   </div>
+
               
 
                     <ul class="list-unstyled">
@@ -98,12 +120,19 @@
                       </li>
                     </ul>
 
+
+                  <div class="upload-description">
+                    사이즈 500X500px로 올려주시면 최적화돼 노출됩니다.
                   </div>
-                <div class="form-group col-md-12"  style="text-align: center">
-                  <button type="submit" class="btn btn-default" style="border:0;   outline: 0; background: none;">
+                  
+                  <button type="submit" class="btn btn-default" id="applyBtn" style="border:0;   outline: 0; background: none;">
                     <img src="/modules/competitions/img/apply_btn.png" alt="신청하기">
-                   </button>
+                  </button>
+                  
                 </div>
+
+                 
+                  
               </form>
             </div>
           </div>
