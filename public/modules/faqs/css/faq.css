@@ -1,6 +1,10 @@
 section {
     height:auto;
 }
+
+.container-fluid{
+    padding:0;
+}
 #list-faqs {
   background: url('/modules/competitions/img/sub_bigbanner.jpg') no-repeat 0 0;
 }
@@ -32,4 +36,13 @@ section {
 .list-faqs-header .buttons .btn02 a {
     background: url('/modules/competitions/img/list_btn.png') no-repeat 0 0;
     background-size: cover;
+}
+.faq_tac_con{
+    padding-top:40px;
+}
+
+.faq_tac_list{
+    width:100%;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }

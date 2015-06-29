@@ -203,6 +203,7 @@
   border-top: 5px solid gray;
   margin-left:15px;
   padding:10px;
+  overflow: hidden;
 }
 .band_name{
   margin-top:115px;

@@ -5,6 +5,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 	function($scope, $stateParams, $location,$http, Authentication, Competitions,Comments,Likes,$window) {
 		$scope.authentication = Authentication;
 		$scope.likeCount = 0;
+		$scope.teamImgFlag = false;
 
 
 
@@ -29,8 +30,14 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 			$scope.create = function () {
 				// Create new Competition object
 
-				if (!$scope.agreePolicy) {
-					alert("이용약관에 동의해 주세요");
+				if ($scope.agreePolicy != 'agree') {
+					$scope.error = "이용약관에 동의해 주세요";
+					return;
+				}
+
+				if(!$scope.teamImgFlag){
+					$scope.error = "팀 이미지를 등록해 주세요";
+					return;
 				}
 
 
@@ -278,7 +285,6 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 					twiLike: 1,
 					competitionId: $scope.competition._id
 				});
-				console.log($scope.competition._id);
 
 				// Redirect after save
 				like.$update(like, function (response) {
@@ -316,6 +322,7 @@ angular.module('competitions').controller('CompetitionsController', ['$scope', '
 					transformRequest: angular.identity
 				}).success(function () {
 					alert("이미지 등록이 완료되었습니다.");
+					$scope.teamImgFlag = true;
 				}).error();
 			};
 

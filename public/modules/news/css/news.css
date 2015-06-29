@@ -30,3 +30,13 @@
     background: url('/modules/competitions/img/list_btn.png') no-repeat 0 0;
     background-size: cover;
 }
+
+.news_tac_con{
+    padding-top:40px;
+}
+
+.news_tac_list{
+    width:100%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}

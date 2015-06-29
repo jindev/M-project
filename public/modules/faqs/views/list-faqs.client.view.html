@@ -1,5 +1,5 @@
 <section data-ng-controller="FaqsController" data-ng-init="find()" id="list-faqs">
-    <div class="container-fluid list-competition">
+    <div class="container-fluid">
         <div class="list-faqs-header">
             <h1 class="sr-only">FAQ</h1>
             <menu class="buttons">
@@ -11,10 +11,10 @@
                 </li>
             </menu>
         </div>
-        <div>
+        <div class="faq_tac_con">
           <img src="modules/faqs/img/faq_tac.png">
         </div>
-        <div class="list-group">
+        <div class="faq_tac_list">
             <div data-ng-repeat="faq in faqs" data-ng-href="#!/faqs/{{faq._id}}" class="list-group-item">
     			<h4 class="list-group-item-heading" data-ng-bind="faq.name"></h4>
                 <p data-ng-bind="faq.content"></p>
