@@ -153,6 +153,7 @@
     height:80px;
     font-size:18px;
     width: 100%;
+    color: white;
 }
 
 .commen_add_btn{
@@ -173,10 +174,19 @@
 
 .notice-description{  
   text-align: right;
+  margin-right:60px;
 }
 .agree-description{
   text-align: left;
+  margin-top: 60px;
+  padding-right:40px;
+  margin-bottom: 20px;
+}
+
+.upload-description{
+  text-align: left;
   margin: 20px 0px;
+  
 }
 
 .agree-radio{

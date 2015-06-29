@@ -35,7 +35,7 @@
 }
 .signup_form{
   text-align:left;
-  padding:50px;  
+  padding:50px 80px 50px 100px;
 }
 
 .signup-list-header{
@@ -110,7 +110,7 @@
 }
 .signin_form{
   text-align:left;
-  padding:50px;  
+  padding:50px 80px 50px 100px;
 }
 
 .login_button, .signin_button{
@@ -118,8 +118,14 @@
 }
 
 .login_button_size, .signin_button_size{
-  width: 100%;
-  height: auto;
+  width: 95%;
+  margin-bottom: 15px;
+/*  height: auto;*/
+}
+
+.login_button_size{
+  margin-top:20px;
+  margin-left:-20px;
 }
 
 .signin_btn{
@@ -127,17 +133,97 @@
     background: none;
     outline: 0;
     border: 0;
+    margin-bottom:20px;
 }
 
-input[type="text"], input[type="password"], input[type="email"]{
+input[type="text"], input[type="password"], input[type="email"], input[type="file"], input[type="textarea"], input[type="url"]{
   background-color : #496084;
 }
 
-.text-placeholder{color:blue;}
+.text-placeholder{color:white;}
 
 input::-webkit-input-placeholder{
-    color:red;
+    color:white;
 }
 input:-moz-placeholder {
-    color:red;
+    color:white;
+}
+
+
+#description{
+  background-color: #496084;
+  height:150px;
+  padding-top:15px;
+}
+#songTitle{
+  background-color: #496084;
+  height:150px;
+  padding-top:15px;
+}
+
+#applyBtn{
+  margin-left:-20px;
+  
+  
+}
+
+.file_input_textbox
+{
+ float: left;
+ border: none;
+ width:80%;
+ height:50px;
+ padding:6px 12px;
+}
+
+.file_input_div
+{
+ position: relative; 
+ width: 20%; 
+ height: 50px; 
+ overflow: hidden;
+}
+
+.file_input_button
+{
+ width: 100%;
+ height: 50px; 
+ position: absolute; 
+ top: 0px;
+ background-color: #8BDCEF;
+ color: #496084;
+ border: none;
+}
+
+.file_input_hidden
+{
+ font-size: 45px; 
+ position: absolute; 
+ right: 0px; 
+ top: 0px; 
+ opacity: 0; 
+ 
+ filter: alpha(opacity=0); 
+ -ms-filter: "alpha(opacity=0)"; 
+ -khtml-opacity: 0; 
+ -moz-opacity: 0;
+}
+
+.form-size{
+  width:95%;
+  margin-left:10px;
+}
+.formSize{
+/*  height:150px;
+*//*  padding-bottom:100px;*/
+/*  overflow-y: scroll;
+  resize: none;*/
+}
+
+.form-control{
+  border-radius:0px;
+  height:50px;
+}
+.form-group{
+  margin-bottom:-5px;
 }
