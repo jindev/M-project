@@ -65,9 +65,6 @@ alert("8월 1일부터는 작성하신 페이지가 수정이 되지 않습니�
                       <input type="radio" name="agree" value="disagree" ng-model="agreePolicy">동의하지 않습니다.
                     </li>
                   </ul>
-                  
-                  
-                  
                 </div>
                 <div class="col-md-6">
                   <div class="form-group form-size">
@@ -76,6 +73,7 @@ alert("8월 1일부터는 작성하신 페이지가 수정이 되지 않습니�
                       <!-- <input type="textarea" data-ng-model="songTitle" id="songTitle" class="form-control formSize" placeholder="참가곡 제목" required> -->      <textarea data-ng-model="songTitle" id="songTitle" class="form-control formSize" placeholder="참가곡 제목" required></textarea>
                     </div>
                   </div>
+                  
                   <div class="form-group form-size">
                     <label class="control-label" for="songDesc"></label>
                     <div class="controls">
@@ -89,50 +87,23 @@ alert("8월 1일부터는 작성하신 페이지가 수정이 되지 않습니�
                       <input type="text" data-ng-model="lyric" id="lyric" class="form-control" placeholder="참가곡 가사" required>
                     </div>
                   </div>
-
-                  <!-- <input  type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/> -->
-                  <!--<youtube-video video-url="teamUrl"></youtube-video>-->
-
                   <div class="form-group form-size">
-
+                    <label class="control-label" for="file"></label>
                     <div class="controls">
-
                       <input type="text" id="fileName" class="file_input_textbox" placeholder="사진" readonly="readonly">
-
-
                       <div class="file_input_div">
                         <input type="button" value="찾기" class="file_input_button" />
                         <input type="file" class="file_input_hidden" onchange="angular.element(this).scope().uploadFile(this.files)"/>
                       </div>
                     </div>
-
-
                   </div>
-
-              
-
-                    <ul class="list-unstyled">
-                      <li class="agree-radio">
-                        <input type="radio" name="agree" value="agree" checked ng-model="agreePolicy">동의합니다.
-                      </li>
-                      <li class="agree-radio">
-                        <input type="radio" name="agree" value="disagree" >동의하지 않습니다.
-                      </li>
-                    </ul>
-
-
                   <div class="upload-description">
                     사이즈 500X500px로 올려주시면 최적화돼 노출됩니다.
                   </div>
-                  
                   <button type="submit" class="btn btn-default" id="applyBtn" style="border:0;   outline: 0; background: none;">
                     <img src="/modules/competitions/img/apply_btn.png" alt="신청하기">
                   </button>
-                  
-                </div>
-
-                 
-                  
+                </div>                  
               </form>
             </div>
           </div>
