@@ -189,9 +189,11 @@
     height:235px;
 }
 .info-view{
+    padding:10px;
     color:white;
     font-size:18px;
     text-align: center;
+    overflow:hidden;
 }
 
 .message_desc{
@@ -205,6 +207,7 @@
 .band_name{
   margin-top:115px;
   margin-left:50px;
+  overflow:hidden;
   
 }
 
