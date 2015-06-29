@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-	//db: 'mongodb://localhost/m-project-dev',
-	db: process.env.MONGOHQ_URL || "mongodb://heroku_0wsj0rd5:njh06qj38te4laf47vkdab3msm@ds047642.mongolab.com:47642/heroku_0wsj0rd5",
+	db: 'mongodb://localhost/m-project-dev',
+	//db: process.env.MONGOHQ_URL || "mongodb://heroku_0wsj0rd5:njh06qj38te4laf47vkdab3msm@ds047642.mongolab.com:47642/heroku_0wsj0rd5",
 	app: {
 		title: 'UNI MUSIC RACE'
 	},
