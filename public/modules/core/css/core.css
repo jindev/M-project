@@ -209,7 +209,7 @@ footer #footer_container span {
 }
 
 @media screen and (max-width:480px) {
- 
+
 
   .navbar-toggle {
     display: block!important;
@@ -224,38 +224,116 @@ footer #footer_container span {
   }
 
   .navbar-inverse {
+    display: block;
+
     min-width: 0px;
-    display: block!important;
+    max-width: 480px;
+    width: 100%;
+    
   }
 
   .navbar-collapse {
     background-color: #ffffff;
   }
 
-    .navbar-collapse {
+  .navbar-collapse {
     background-color: #ffffff;
   }
 
   header .container {
     background-image: none;
+    background: none;
+  }
+
+  .container > .navbar-header{
+    width: 100%;
   }
 
   #title_container {
     height: 376px;
   }
 
-  #competition_con{
+  #competition_con {
     display: none;
   }
 
-  #organization{
+  #organization {
     position: relative;
-    top: 340px;
+    top: 330px;
 
     margin: 0px;
   }
 
-  #organization > img{
+  #organization > img {
     width: 90%;
+  }
+
+  .content > .container {
+    width: 100%;
+    padding: 0px;
+
+  }
+
+  .competition_main_slogan_con {
+    height: 400px;  
+  }
+
+  #competition_main_info span {
+    display: block;
+  }
+
+  #competition_date > img {
+    margin-left: -30px;
+  }
+
+  #schedule_line {
+    width: 100%;
+  }
+
+  #schedule_info_img {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  #award_tag {
+    margin-left: -16px;
+  }
+  
+  .award_con {
+    display: block;
+
+    float: none;
+
+    margin: 10px auto;
+  }
+  
+  #competition_judge_con {
+    margin-bottom: 30px;
+  }
+
+  .judge_con {
+    display: block;
+
+    margin: 10px auto;
+  }
+
+  .judge_img > img {
+    width: 100%;
+  }
+  
+  #competition_judge_con > .row > div{
+    float: none;
+  }
+
+  #inquiry_tac {
+    margin-left: -20px;
+  }
+  
+  #copyright {
+
+    float: none !important;
+
+    text-align: center;
   }
 }
