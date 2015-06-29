@@ -31,6 +31,14 @@
 			<li ui-route="/signup" ng-class="{active: $uiRoute}">
 				<a href="/#!/signup">회원가입</a>
 			</li>
+			<li>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://unimusicrace.com" data-count="none"><img src="modules/core/img/twiter_icon.png"></a>
+			</li>
+			<li >
+				<a class="fb-like" data-href="http://unimusicrace.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false">
+					<img src="modules/core/img/facebook_icon.png">
+				</a>
+			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
 			<li class="dropdown">
@@ -53,9 +61,21 @@
 					</li>
 				</ul>
 			</li>
-			<li>
+			<li data-ng-show="authentication.user.competitionId">
 				<a ng-click="isAlreadyApply()">MY PAGE</a>
 			</li>
+			<li>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://unimusicrace.com" data-count="none"><img src="modules/core/img/twiter_icon.png"></a>
+			</li>
+			<li >
+				<a class="fb-like" data-href="http://unimusicrace.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false">
+					<img src="modules/core/img/facebook_icon.png">
+				</a>
+			</li>
+
 		</ul>
 	</nav>
 </div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+

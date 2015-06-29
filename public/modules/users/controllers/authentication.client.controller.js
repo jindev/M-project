@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication','$window',
-	function($scope, $http, $location, Authentication,$window) {
+angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication','$window','Modal',
+	function($scope, $http, $location, Authentication,$window,Modal) {
 		$scope.authentication = Authentication;
 
 		// If user is signed in then redirect back home
@@ -42,6 +42,14 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.error = response.message;
 			});
 		};
+
+
+		$scope.showModal = function(){
+			Modal.activate();
+		}
+		$scope.closeMe = function(){
+			Modal.deactivate();
+		}
 
 
 

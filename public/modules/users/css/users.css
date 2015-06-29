@@ -141,3 +141,14 @@ input::-webkit-input-placeholder{
 input:-moz-placeholder {
     color:red;
 }
+
+.btf-modal{
+    width: 500px;
+    background-color:white;
+    border:3px solid #496084;
+}
+.policy_content_section{
+    border:3px solid #496084;
+    height:300px;
+    width:500px;
+}

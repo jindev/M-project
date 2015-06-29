@@ -10,3 +10,10 @@ angular.module('users').factory('Users', ['$resource',
 		});
 	}
 ]);
+angular.module('users').factory('Modal', function (btfModal) {
+	return btfModal({
+		controller: 'AuthenticationController',
+		templateUrl: 'modules/users/views/authentication/modal.html'
+	});
+});
+

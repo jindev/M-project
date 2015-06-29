@@ -72,6 +72,9 @@ var UserSchema = new Schema({
 	},
 	resetPasswordExpires: {
 		type: Date
+	},
+	competitionId : {
+		type: Schema.ObjectId
 	}
 });
 

@@ -7,6 +7,8 @@ var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
 	Competition = mongoose.model('Competition'),
 	Comment = mongoose.model('Comment'),
+	User = mongoose.model('User'),
+
 	_ = require('lodash');
 var	async = require('async');
 var formidable = require('formidable');
@@ -63,7 +65,9 @@ exports.create = function(req, res) {
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(competition);
+			User.update({_id : req.user},{competitionId :competition._id },function(){
+				res.jsonp(competition);
+			});
 		}
 	});
 };

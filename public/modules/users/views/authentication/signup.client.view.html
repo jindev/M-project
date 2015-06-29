@@ -44,7 +44,7 @@
                 <input type="checkbox" data-ng-model="agreePolicy" name="chk_info" value="HTML"> 이용약관에 동의합니다.
               </span>
               <span>
-                <a type="button" class="undecorated-link">
+                <a  ng-click="showModal()" type="button" class="undecorated-link" data-toggle="modal" data-target="#policy">
                   <img src="/modules/users/img/btn_terms.png">
                 </a>
               </span>
