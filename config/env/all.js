@@ -23,7 +23,7 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'public/lib/angular-modal/modal.js',
+				'public/modules/users/angular-modal/modal.js',
 				'https://www.youtube.com/iframe_api',
 				'public/lib/angular-youtube-mb/src/angular-youtube-embed.js',
 				'public/lib/ng-file-upload/ng-file-upload.min.js',
@@ -34,7 +34,7 @@ module.exports = {
       'public/application.min.css',
 	  'public/modules/*/css/*.css',
       'public/modules/*/less/*.css',
-	  'public/lib/angular-modal/modal.css',
+			'public/modules/users/angular-modal/modal.css',
     ],
     less: [
       'public/modules/*/less/*.less'
