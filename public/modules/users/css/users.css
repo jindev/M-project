@@ -241,3 +241,82 @@ input:-moz-placeholder {
   margin-bottom:-5px;
 
 }
+
+@media screen and (max-width:480px) {
+
+
+  .signup_container {
+    width: 100%;
+
+    background-size: 100% auto;
+    background-position: center;
+  }
+
+  .signup-list-header {
+    height: 40vw;
+  }
+
+  .signup-list-header .title-text {
+    position: relative;
+    top: 15vw;
+    left: 5vw;
+
+    width: 40vw;
+    height: 12vw;
+
+    background-position: center;
+    background-size: contain;
+  }
+
+  .signup-list-header .dummy01 {
+    top: 10vw;
+    left: 47vw;
+
+    width: 15vw;
+    height: 15vw;
+
+    background-position: center;
+    background-size: contain;
+  }
+
+  .signup-list-header .dummy02 {
+    top: 21vw;
+    left: 75vw;
+    bottom: auto;
+
+    width: 20vw;
+    height: 20vw;
+
+    background-position: center;
+    background-size: contain;
+  }
+
+  .signup-list-header .dummy03 {
+    top: 20vw;
+    left: 50vw;
+    bottom: auto;
+
+    width: 30vw;
+    height: 32vw;
+
+    background-position: center;
+    background-size: contain;
+  }
+
+  .signup_form {
+    padding: 5vw 6vw;
+  }
+
+  .signup_form .col-xs-12 {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+  
+  .signin {
+    padding: 0vw 15px;
+  }
+
+  .signin_button > a > img{
+    width: 75vw
+  }
+}
