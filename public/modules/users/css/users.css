@@ -319,4 +319,19 @@ input:-moz-placeholder {
   .signin_button > a > img{
     width: 75vw
   }
+
+  .signin_container {
+    width: 100%;
+
+    background-size: 100% auto;
+    background-position: center;
+  }
+
+  .signin_form {
+    padding: 5vw 6vw;
+  }
+
+  .login_button > a > img{
+    width: 75vw
+  }
 }
