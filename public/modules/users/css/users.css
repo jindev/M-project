@@ -249,7 +249,7 @@ input:-moz-placeholder {
     width: 100%;
 
     background-size: 100% auto;
-    background-position: center;
+    background-position: 0 0;
   }
 
   .signup-list-header {
@@ -324,7 +324,7 @@ input:-moz-placeholder {
     width: 100%;
 
     background-size: 100% auto;
-    background-position: center;
+    background-position: 0 0;
   }
 
   .signin_form {

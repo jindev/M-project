@@ -235,3 +235,16 @@
 .pagination-centered{
   text-align: center;
 }
+
+
+@media screen and (max-width:480px) {
+
+
+  .controls {
+    width: 100%;
+  }
+
+  #applyBtn > img {
+    width: 70vw;
+  }
+}
