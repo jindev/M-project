@@ -19,10 +19,15 @@
 						<p><span>참가 접수</span> 7.1(수)~ 7.31(금) 본 홈페이지에서 접수</p>
 						<p><span>참가 자격</span> 신인 창작음악인(정규앨범 발매 3년 이내 1장 이하)</p>
 					</div>
-					<img src="modules/core/img/schedule_line.png">
+					<img id="schedule_line" src="modules/core/img/schedule_line.png">
 					<div id="competition_date">
 						<img src="modules/core/img/schedule_tac.png">
-						<img id="schedule_info_img" src="modules/core/img/schedule_infographic.png">
+						<picture id="schedule_info">
+							<!--[if IE 9]><video style="display: none;"><![endif]-->	
+							<source srcset="modules/core/img/schedule_infographic.png" media="(min-width: 480px)">
+							<!--[if IE 9]></video><![endif]-->
+							<img id="schedule_info_img" src="modules/core/img/mobile/schedule_infographic.png">
+						</picture>
 					</div>
 				</div>
 			</div>
@@ -30,7 +35,7 @@
 		<article class="join-introduce-award">
 			<h2><span class="sr-only">시상내역</span></h2>
 			<ul class="row">
-				<li class="col-xs-6 col-md-4 award01">
+				<li class="col-xs-11 col-md-4 award01">
 					<div class="award-desc">
 						<div class="dummy"></div>
 						<div class="context">
@@ -39,7 +44,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="col-xs-6 col-md-4 award02">
+				<li class="col-xs-11 col-md-4 award02">
 					<div class="award-desc">
 						<div class="dummy"></div>
 						<div class="context">
@@ -48,7 +53,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="col-xs-6 col-md-4 award03">
+				<li class="col-xs-11 col-md-4 award03">
 					<div class="award-desc">
 						<div class="dummy"></div>
 						<div class="context">
@@ -65,7 +70,7 @@
 				<img  id ="competition_judge_tag" src="modules/core/img/examiner_tac.png">
 
 				<div class="row">
-					<div class="col-md-4 judge_con">
+					<div class="col-md-4 col-xs-11 judge_con">
 						<div class="judge_img">
 							<img id="" src="modules/core/img/examiner_a.png">
 						</div>
@@ -77,8 +82,7 @@
 
 						</div>
 					</div>
-
-					<div class="col-md-4 judge_con">
+					<div class="col-md-4 col-xs-11 judge_con">
 						<div class="judge_img">
 							<img id="" src="modules/core/img/examiner_b.png">
 						</div>
@@ -90,8 +94,7 @@
 							<p>그룹 '김현식과 봄여름가을겨울' 멤버</p>
 						</div>
 					</div>
-
-					<div class="col-md-4 judge_con">
+					<div class="col-md-4 col-xs-11 judge_con">
 						<div class="judge_img">
 							<img id="" src="modules/core/img/examiner_c.png">
 						</div>
