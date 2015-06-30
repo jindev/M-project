@@ -47,3 +47,33 @@ section {
     margin-top: 40px;
     margin-bottom: 60px;
 }
+
+@media screen and (max-width:460px) {
+
+  .list-faqs-header {
+    position: relative;
+    width: 100%;
+    height: 60vw;
+    z-index: -1;
+
+    background-color: #8EDCEE;
+  }
+
+  .list-faqs-header .buttons {
+    position: relative;
+
+    top: 40vw;
+  }
+
+  .list-faqs-header .buttons li {
+    display: inline-block;
+  }
+
+  .container-fluid > .list-faqs-header > .buttons > li > a {
+    width: 40vw;
+    height: 15vw;
+
+    background-size: contain;
+
+  }
+}
