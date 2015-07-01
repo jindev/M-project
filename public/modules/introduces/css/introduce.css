@@ -537,7 +537,7 @@
     height: auto;
   }
 
-  #join_guide #intro_section h2 {
+  #intro_section #join_guide h2 {
     margin: 0;
   }
 }
