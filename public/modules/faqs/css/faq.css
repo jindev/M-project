@@ -48,7 +48,7 @@ section {
     margin-bottom: 60px;
 }
 
-@media screen and (max-width:460px) {
+@media screen and (max-width:480px) {
 
   .list-faqs-header {
     position: relative;
@@ -74,6 +74,5 @@ section {
     height: 15vw;
 
     background-size: contain;
-
   }
 }

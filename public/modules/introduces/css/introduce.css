@@ -531,4 +531,13 @@
   #google-map-location {
     width: 100%;
   }
+
+  /* list-introduces.client.view2.html */
+  #join_guide {
+    height: auto;
+  }
+
+  #join_guide #intro_section h2 {
+    margin: 0;
+  }
 }
