@@ -447,9 +447,29 @@
   .introduces-list-header .organization {
     height: 10vw;
   }
+  
+  .introduces-list-header .organization .organization-list {
+    height: 10vw;
+    margin: 0 5vw;
+    background-size: 100% 100%;
+  }
 
   .introduces-list-header .organization .organization-left {
+    width: 5vw;
     height: 10vw;
+    background-size: contain;
+  }
+
+  .introduces-list-header .organization .organization-right {
+    width: 5vw;
+    height: 10vw;
+    background-size: contain;
+  }
+
+  .introduces-list-header .organization .organization-list .list {
+    width: 100%;
+    height: 10vw;
+    background-size: contain;
   }
 
   .join-introduce-description {
